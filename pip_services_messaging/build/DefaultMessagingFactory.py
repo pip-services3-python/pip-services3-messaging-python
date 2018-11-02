@@ -5,7 +5,7 @@
 
     DefaultMessagingFactory  implementation
 
-    :copyright: Conceptual Vision Consulting LLC 2015-2016, see AUTHORS for more details.
+    :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
 from pip_services_commons.refer import Descriptor
@@ -18,7 +18,14 @@ MemoryMessageQueueDescriptor = Descriptor("pip-services-net", "message-queue", "
 MemoryMessageQueueFactoryDescriptor = Descriptor("pip-services", "factory", "message-queue", "memory", "1.0")
 
 class DefaultMessagingFactory(Factory):
+    """
+    Creates [[MemoryMessageQueue]] components by their descriptors.
+    Name of created message queue is taken from its descriptor.
+    """
     def __init__(self):
+        """
+        Create a new instance of the factory.
+        """
         self.register_as_type(MemoryMessageQueueFactoryDescriptor, MemoryMessageQueueFactory)
         self.register_as_type(MemoryMessageQueueDescriptor, MemoryMessageQueue)
 

@@ -5,7 +5,7 @@
 
     MemoryMessageQueueFactory implementation
 
-    :copyright: Conceptual Vision Consulting LLC 2015-2016, see AUTHORS for more details.
+    :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
 from pip_services_commons.refer import Descriptor
@@ -16,6 +16,15 @@ _Descriptor = Descriptor("pip-services-net", "factory", "message-queue", "memory
 MemoryQueueDescriptor = Descriptor("pip-services-net", "message-queue", "memory", "*", "*")
 
 class MemoryMessageQueueFactory(Factory):
-    def register(self, locator, factory):
-        descriptor = locator
-        return MemoryMessageQueue(descriptor.get_name())
+    """
+    Creates [[MemoryMessageQueue]] components by their descriptors.
+    Name of created message queue is taken from its descriptor.
+    """
+    def __init__(self):
+        """
+        Create a new instance of the factory.
+        """
+        super(MemoryMessageQueueFactory, self).__init__()
+        def register(locator, factory):
+            descriptor = locator
+            return MemoryMessageQueue(descriptor.get_name())

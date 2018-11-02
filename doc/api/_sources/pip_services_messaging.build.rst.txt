@@ -1,0 +1,18 @@
+pip\_services\_messaging.build package
+======================================
+
+Submodules
+----------
+
+.. toctree::
+
+   pip_services_messaging.build.DefaultMessagingFactory
+   pip_services_messaging.build.MemoryMessageQueueFactory
+
+Module contents
+---------------
+
+.. automodule:: pip_services_messaging.build
+    :members:
+    :undoc-members:
+    :show-inheritance:

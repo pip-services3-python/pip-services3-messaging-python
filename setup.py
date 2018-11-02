@@ -17,7 +17,7 @@ from setuptools import setup
 from setuptools import find_packages
 
 setup(
-    name='pip_services_net',
+    name='pip_services_messaging',
     version='3.0.0',
     url='http://github.com/pip-services-python/pip-services-messaging-python',
     license='MIT',

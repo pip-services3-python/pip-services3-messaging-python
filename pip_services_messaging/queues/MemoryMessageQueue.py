@@ -5,7 +5,7 @@
     
     Memory message queue implementation.
     
-    :copyright: Conceptual Vision Consulting LLC 2015-2016, see AUTHORS for more details.
+    :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
 
@@ -18,6 +18,28 @@ from .MessagingCapabilities import MessagingCapabilities
 from .MessageQueue import MessageQueue
 
 class MemoryMessageQueue(MessageQueue, ICleanable):
+    """
+    Message queue that sends and receives messages within the same process by using shared memory.
+    This queue is typically used for testing to mock real queues.
+
+    ### Configuration parameters ###
+
+        - name:                        name of the message queue
+
+    ### References ###
+
+        - *:logger:*:*:1.0           (optional) ILogger components to pass log messages
+        - *:counters:*:*:1.0         (optional) ICounters components to pass collected measurements
+
+    Example:
+        queue = MessageQueue("myqueue")
+        queue.send("123", MessageEnvelop(None, "mymessage", "ABC"))
+
+        message = queue.receive("123", 0)
+        if message != None:
+            ...
+            queue.complete("123", message)
+    """
     _default_lock_timeout = 30000
     _default_wait_timeout = 5000
 
@@ -34,6 +56,11 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def __init__(self, name = None):
+        """
+        Creates a new instance of the message queue.
+
+        :param name: (optional) a queue name.
+        """
         super(MemoryMessageQueue, self).__init__(name)
         self._event = threading.Event()
         self._capabilities = MessagingCapabilities(True, True, True, True, True, True, True, False, True)
@@ -43,14 +70,33 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def is_opened(self):
+        """
+        Checks if the component is opened.
+
+        :return: true if the component has been opened and false otherwise.
+        """
         return self._opened
 
     def _open_with_params(self, correlation_id, connection, credentials):
+        """
+        Opens the component with given connection and credential parameters.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+
+        :param connection: connection parameters
+
+        :param credentials: credential parameters
+        """
         self._opened = True
         self._logger.trace(correlation_id, "Opened queue " + str(self))
 
 
     def close(self, correlation_id):
+        """
+        Closes component and frees used resources.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        """
         self._opened = False
         self._listening = False 
         self._event.set()
@@ -58,6 +104,11 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def read_message_count(self):
+        """
+        Reads the current number of messages in the queue to be delivered.
+
+        :return: a number of messages
+        """
         self._lock.acquire()
         try:
             return len(self._messages)
@@ -66,6 +117,13 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def send(self, correlation_id, message):
+        """
+        Sends a message into the queue.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+
+        :param envelop: a message envelop to be sent.
+        """
         if message == None: return
 
         self._lock.acquire()
@@ -83,6 +141,14 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def peek(self, correlation_id):
+        """
+        Peeks a single incoming message from the queue without removing it.
+        If there are no messages available in the queue it returns null.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+
+        :return: a message object.
+        """
         message = None
 
         self._lock.acquire()
@@ -100,6 +166,16 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def peek_batch(self, correlation_id, message_count):
+        """
+        Peeks multiple incoming messages from the queue without removing them.
+        If there are no messages available in the queue it returns an empty list.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+
+        :param message_count: a maximum number of messages to peek.
+
+        :return: a list of message objects.
+        """
         messages = []
 
         self._lock.acquire()
@@ -117,6 +193,15 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def receive(self, correlation_id, wait_timeout):
+        """
+        Receives an incoming message and removes it from the queue.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+
+        :param wait_timeout: a timeout in milliseconds to wait for a message to come.
+
+        :return: a message object.
+        """
         message = None
 
         self._lock.acquire()
@@ -165,6 +250,14 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def renew_lock(self, message, lock_timeout):
+        """
+        Renews a lock on a message that makes it invisible from other receivers in the queue.
+        This method is usually used to extend the message processing time.
+
+        :param message: a message to extend its lock.
+
+        :param lock_timeout: a locking timeout in milliseconds.
+        """
         if message == None or message.reference == None: 
             return
 
@@ -184,6 +277,14 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def abandon(self, message):
+        """
+        Returnes message into the queue and makes it available for all subscribers to receive it again.
+        This method is usually used to return a message which could not be processed at the moment
+        to repeat the attempt. Messages that cause unrecoverable errors shall be removed permanently
+        or/and send to dead letter queue.
+
+        :param message: a message to return.
+        """
         if message == None or message.reference == None: 
             return
 
@@ -213,6 +314,12 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def complete(self, message):
+        """
+        Permanently removes a message from the queue.
+        This method is usually used to remove the message after successful processing.
+
+        :param message: a message to remove.
+        """
         if message == None or message.reference == None: 
             return
 
@@ -228,6 +335,11 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def move_to_dead_letter(self, message):
+        """
+        Permanently removes a message from the queue and sends it to dead letter queue.
+
+        :param message: a message to be removed.
+        """
         if message == None or message.reference == None:
             return
 
@@ -244,6 +356,13 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def listen(self, correlation_id, receiver):
+        """
+        Listens for incoming messages and blocks the current thread until queue is closed.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+
+        :param receiver: a receiver to receive incoming messages.
+        """
         if self._listening:
             self._logger.error(correlation_id, "Already listening queue " + str(self))
             return
@@ -266,10 +385,21 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
 
     def end_listen(self, correlation_id):
+        """
+        Ends listening for incoming messages.
+        When this method is call [[listen]] unblocks the thread and execution continues.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        """
         self._listening = False
 
 
     def clear(self, correlation_id):
+        """
+        Clears component state.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        """
         self._lock.acquire()
         try:
             # Clear messages

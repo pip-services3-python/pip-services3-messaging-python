@@ -1,0 +1,7 @@
+pip_services_messaging
+======================
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services_messaging
