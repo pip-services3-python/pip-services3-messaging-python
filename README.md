@@ -3,14 +3,15 @@
 This framework is a part of [Pip.Services](https://github.com/pip-services/pip-services) project.
 It provides asynchronous message components 
 
+- **Build** - message queues factories
 - **Messaging** - asynchronous message queues
 
 Quick Links:
 
-* [Downloads](https://github.com/pip-services/pip-services-net-python/blob/master/doc/Downloads.md)
-* [API Reference](http://htmlpreview.github.io/?https://github.com/pip-services/pip-services-net-python/blob/master/doc/api/index.html)
-* [Building and Testing](https://github.com/pip-services/pip-services-net-python/blob/master/doc/Development.md)
-* [Contributing](https://github.com/pip-services/pip-services-net-python/blob/master/doc/Development.md/#contrib)
+* [Downloads](https://github.com/pip-services-python/pip-services-messaging-python/blob/master/doc/Downloads.md)
+* [API Reference](http://htmlpreview.github.io/?https://github.com/pip-services-python/pip-services-messaging-python/blob/master/doc/api/index.html)
+* [Building and Testing](https://github.com/pip-services-python/pip-services-messaging-python/blob/master/doc/Development.md)
+* [Contributing](https://github.com/pip-services-python/pip-services-messaging-python/blob/master/doc/Development.md/#contrib)
 
 ## Acknowledgements
 

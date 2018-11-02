@@ -1,4 +1,13 @@
-# Communication components for Pip.Services in Python Changelog
+# Asynchronous message queues for Pip.Services in Python Changelog
+
+## <a name="3.0.0"></a> 3.0.0 (2018-10-30)
+
+### New release
+* Restructuring package
+
+### Features
+- **Build** - message queues factories
+- **Messaging** - asynchronous message queues
 
 ## <a name="2.0.0"></a> 2.0.0 (2017-04-13)
 
