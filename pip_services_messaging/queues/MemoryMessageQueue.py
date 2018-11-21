@@ -236,7 +236,7 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
             # Add messages to locked messages list
             locked_message = self.LockedMessage()
-            locked_message.lock_expiration = time.clock() + (float(self._default_lock_timeout) / 1000.)
+            locked_message.lock_expiration = time.perf_counter() + (float(self._default_lock_timeout) / 1000.)
             #locked_message.message = message
 
             self._locked_messages[locked_token] = locked_message
@@ -269,7 +269,7 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
             # If lock is found, extend the lock
             if locked_message != None:
-                locked_message.lock_expiration = time.clock() + (float(lock_timeout) / 1000.)
+                locked_message.lock_expiration = time.perf_counter() + (float(lock_timeout) / 1000.)
         finally:
             self._lock.release()
 
@@ -299,7 +299,7 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
                 message.reference = None
 
                 # Skip if it is already expired
-                if locked_message.lock_expiration <= time.clock():
+                if locked_message.lock_expiration <= time.perf_counter():
                     return
             # Skip if it absent
             else:

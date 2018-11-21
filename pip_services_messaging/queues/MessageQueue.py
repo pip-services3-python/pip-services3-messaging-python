@@ -22,7 +22,7 @@ from pip_services_components.connect import ConnectionResolver
 from .MessageEnvelop import MessageEnvelop
 from .IMessageQueue import IMessageQueue
 
-class MessageQueue(IConfigurable, IReferenceable, IOpenable, IClosable, IMessageQueue):
+class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
     """
     Abstract message queue that is used as a basis for specific message queue implementations.
 
