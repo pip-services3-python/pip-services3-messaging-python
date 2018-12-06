@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.queues.__init__
+    pip_services3_messaging.queues.__init__
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Queues module initialization

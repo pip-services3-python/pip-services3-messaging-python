@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.queues.MessagingCapabilities
+    pip_services3_messaging.queues.MessagingCapabilities
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Messaging capabilities implementation.

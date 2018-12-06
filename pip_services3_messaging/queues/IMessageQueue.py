@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.queues.IMessageQeueue
+    pip_services3_messaging.queues.IMessageQeueue
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Interface for message queues.
@@ -9,7 +9,7 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from pip_services_commons.run import IOpenable, IClosable
+from pip_services3_commons.run import IOpenable, IClosable
 
 class IMessageQueue(IOpenable, IClosable):
     """

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.queues.IMessageReceiver
+    pip_services3_messaging.queues.IMessageReceiver
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Interface for message receivers.

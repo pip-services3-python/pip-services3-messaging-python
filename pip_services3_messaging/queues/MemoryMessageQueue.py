@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.queues.MemoryMessageQueue
+    pip_services3_messaging.queues.MemoryMessageQueue
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Memory message queue implementation.
@@ -12,7 +12,7 @@
 import time
 import threading
 
-from pip_services_commons.run import ICleanable
+from pip_services3_commons.run import ICleanable
 from .MessageEnvelop import MessageEnvelop
 from .MessagingCapabilities import MessagingCapabilities
 from .MessageQueue import MessageQueue

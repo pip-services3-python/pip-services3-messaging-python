@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.build.DefaultMessagingFactory
+    pip_services3_messaging.build.DefaultMessagingFactory
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     DefaultMessagingFactory  implementation
@@ -8,8 +8,8 @@
     :copyright: Conceptual Vision Consulting LLC 2018-2019, see AUTHORS for more details.
     :license: MIT, see LICENSE for more details.
 """
-from pip_services_commons.refer import Descriptor
-from pip_services_components.build import Factory
+from pip_services3_commons.refer import Descriptor
+from pip_services3_components.build import Factory
 from .MemoryMessageQueueFactory import MemoryMessageQueueFactory
 from ..queues.MemoryMessageQueue import MemoryMessageQueue
 

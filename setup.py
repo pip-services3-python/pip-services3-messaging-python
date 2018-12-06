@@ -3,7 +3,7 @@ Pip.Services Net
 ----------------------
 
 Pip.Services is an open-source library of basic microservices.
-pip_services_messaging provides messaging components.
+pip_services3_messaging provides messaging components.
 
 Links
 `````
@@ -17,9 +17,9 @@ from setuptools import setup
 from setuptools import find_packages
 
 setup(
-    name='pip_services_messaging',
+    name='pip_services3_messaging',
     version='3.0.0',
-    url='http://github.com/pip-services-python/pip-services-messaging-python',
+    url='http://github.com/pip-services3-python/pip-services3-messaging-python',
     license='MIT',
     author='Conceptual Vision Consulting LLC',
     author_email='seroukhov@gmail.com',
@@ -30,7 +30,7 @@ setup(
     zip_safe=True,
     platforms='any',
     install_requires=[
-        'iso8601', 'PyYAML', 'bottle', 'pip-services-commons', 'pip-services-components'
+        'iso8601', 'PyYAML', 'bottle', 'pip-services3-commons', 'pip-services3-components'
     ],
     classifiers=[
         'Development Status :: 4 - Beta',

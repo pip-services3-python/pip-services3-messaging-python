@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.queues.MessageEnvelop
+    pip_services3_messaging.queues.MessageEnvelop
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Message envelop implementation.
@@ -9,8 +9,8 @@
     :license: MIT, see LICENSE for more details.
 """
 
-from pip_services_commons.convert import StringConverter
-from pip_services_commons.data import IdGenerator
+from pip_services3_commons.convert import StringConverter
+from pip_services3_commons.data import IdGenerator
 
 class MessageEnvelop(object):
     """

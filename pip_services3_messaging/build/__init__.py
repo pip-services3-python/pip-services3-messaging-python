@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_messaging.build.__init__
+    pip_services3_messaging.build.__init__
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     Messaging factories module initialization

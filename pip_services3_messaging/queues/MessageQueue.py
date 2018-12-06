@@ -11,13 +11,13 @@
 
 import threading
 
-from pip_services_commons.config import IConfigurable, NameResolver
-from pip_services_commons.refer import IReferenceable
-from pip_services_commons.run import IOpenable, IClosable
-from pip_services_components.log import CompositeLogger
-from pip_services_components.count import CompositeCounters
-from pip_services_components.auth import CredentialResolver
-from pip_services_components.connect import ConnectionResolver
+from pip_services3_commons.config import IConfigurable, NameResolver
+from pip_services3_commons.refer import IReferenceable
+from pip_services3_commons.run import IOpenable, IClosable
+from pip_services3_components.log import CompositeLogger
+from pip_services3_components.count import CompositeCounters
+from pip_services3_components.auth import CredentialResolver
+from pip_services3_components.connect import ConnectionResolver
 
 from .MessageEnvelop import MessageEnvelop
 from .IMessageQueue import IMessageQueue
