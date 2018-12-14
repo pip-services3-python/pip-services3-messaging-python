@@ -1,7 +1,0 @@
-pip\_services\_messaging.queues.MessageQueue module
-===================================================
-
-.. automodule:: pip_services_messaging.queues.MessageQueue
-    :members:
-    :undoc-members:
-    :show-inheritance:

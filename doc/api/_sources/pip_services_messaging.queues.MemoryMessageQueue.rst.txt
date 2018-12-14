@@ -1,7 +1,0 @@
-pip\_services\_messaging.queues.MemoryMessageQueue module
-=========================================================
-
-.. automodule:: pip_services_messaging.queues.MemoryMessageQueue
-    :members:
-    :undoc-members:
-    :show-inheritance:
