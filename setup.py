@@ -9,7 +9,7 @@ Links
 `````
 
 * `website <http://github.com/pip-services-python/pip-services-python-messaging>`_
-* `development version <http://github.com/pip-services-python/pip-services-messaging-python>`
+* `development version <http://github.com/pip-services3-python/pip-services3-messaging-python>`
 
 """
 

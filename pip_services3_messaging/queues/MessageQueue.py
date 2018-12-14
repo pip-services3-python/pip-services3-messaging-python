@@ -24,6 +24,8 @@ from .IMessageQueue import IMessageQueue
 
 class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
     """
+    Abstract message queue.
+
     Abstract message queue that is used as a basis for specific message queue implementations.
 
     ### Configuration parameters ###
