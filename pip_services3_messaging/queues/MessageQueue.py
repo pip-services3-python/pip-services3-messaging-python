@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-    pip_services_net.messaging.MessageQeueue
+    pip_services3_messaging.queues.MessageQeueue
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Abstract message queue implementation.
