@@ -9,7 +9,7 @@ It provides asynchronous message components
 Quick Links:
 
 * [Downloads](https://github.com/pip-services3-python/pip-services3-messaging-python/blob/master/doc/Downloads.md)
-* [API Reference](https://pip-services3-messaging-python.readthedocs.io/en/latest/index.html)
+* [API Reference](https://pip-services3-python.github.io/pip-services3-messaging-python/index.html)
 * [Building and Testing](https://github.com/pip-services3-python/pip-services3-messaging-python/blob/master/doc/Development.md)
 * [Contributing](https://github.com/pip-services3-python/pip-services3-messaging-python/blob/master/doc/Development.md/#contrib)
 

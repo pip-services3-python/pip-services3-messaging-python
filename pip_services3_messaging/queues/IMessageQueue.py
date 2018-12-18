@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
     pip_services3_messaging.queues.IMessageQeueue
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     
     Interface for message queues.
     

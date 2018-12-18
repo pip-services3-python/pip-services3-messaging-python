@@ -1,0 +1,7 @@
+pip\_services3\_messaging.queues.IMessageReceiver module
+========================================================
+
+.. automodule:: pip_services3_messaging.queues.IMessageReceiver
+    :members:
+    :undoc-members:
+    :show-inheritance:
