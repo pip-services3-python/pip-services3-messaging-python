@@ -9,7 +9,7 @@
 
 import pytest
 
-from pip_services_messaging.queues import MemoryMessageQueue
+from pip_services3_messaging.queues import MemoryMessageQueue
 from .MessageQueueFixture import MessageQueueFixture
 
 class TestMemoryMessageQueue:

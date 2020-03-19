@@ -11,7 +11,7 @@ import time
 import threading
 import pytest
 
-from pip_services_messaging.queues import IMessageQueue, IMessageReceiver, MessageEnvelop, MessagingCapabilities
+from pip_services3_messaging.queues import IMessageQueue, IMessageReceiver, MessageEnvelop, MessagingCapabilities
 
 class MessageQueueFixture:
     _queue = None
