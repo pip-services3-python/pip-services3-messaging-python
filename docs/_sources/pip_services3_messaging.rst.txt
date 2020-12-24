@@ -5,14 +5,15 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 4
 
-    pip_services3_messaging.build
-    pip_services3_messaging.queues
+   pip_services3_messaging.build
+   pip_services3_messaging.queues
 
 Module contents
 ---------------
 
 .. automodule:: pip_services3_messaging
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:

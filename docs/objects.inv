@@ -1,13 +1,7 @@
 # Sphinx inventory version 2
-# Project: Pip.Services Messaging for Python
-# Version: 3.0
+# Project: pip-services3-messaging
+# Version: 
 # The remainder of this file is compressed using zlib.
-xÚÍœÉnÛ0†ïy
-íÕFƒÞrí¨´=ô(PÔÄa£­åÖ·¾F_¯ORÚ²Ù–,Îp‘nLòÿ¸gÈ°EXA¹ªwa
-UÅÖ"[Åö.Íã:àmPô§Y>É4yÝ¤Z¼	7Cé¢Z$±V‰û”¸r—à‘Õ‰\µŸ?1.ór‹Ð(ÁÇ5>ž°ª
-nMðÆ¹VªÔMnøRCø,ÙFÃå\¥Ôk§Èkt?w©+­i’j×ûü¾‹¥S¥®¥|Ýzœd4ª¹Ž=fÚK±,Î³};€|Êã) "P)ÃDT&&áyZ$ aZ
-ÈâY´ÆdÈYÁ"‘)³~RšŒ¥÷Íú%Í7Ê<Œ©RB9-Pð<=A1ÉŸ¦å(w]Òä€çu&§æá 605D¿Â$ç’J-¬Ó„¬
-óèpïCƒ`ìiBTƒNS£mšÍ0Ó´LŒ/]k`iJ¾ÚÐÐPÒD±Æ®‚7x4-3£FÕD.ªÅ8Ñ´°ˆ®B32X½¯M'•Ýô®ÖSoóRõc~ƒúö³Ø€h§H;3)»	s*]ÍËhf0\æÆ‡ž>«åâÕK-þ1Éån½
-áw!J&E³¥cR–"ªÕ>È%FghV¨/l¡ûÅ/˜aï9‡%ø	Î™x¬œQ^Á¼ˆŽs(šÏäK¨ýQ¡¶~ñ¬¨fØP†>”s>¬»åï™9Ç2sâ<à¡ý=L×Ð9Ö‹´ä0ˆhÃìi!º‰–Ã˜¥5#l H2¯z^+ç)¬hÁØJ¹0Z7PFÂÎBÖŒŠ « ãAäc¶$/œAÎôc>ÝœøxÏInr=û(Lå•á(KHöaƒPÄèÈ¢Näo&(ój˜Pn‹Y´N	 V>ŒÑÀ%jÒ†¦™˜ïÊQ†Q‘:€r„¿IpÿÄÙ"†µI®Õ€0ùö„ežgb]—0!ƒÉ%(ØÛ–vÕ„òôseë 2<®EžÇ„ë«MæS¤äã¶‘·ËFF“†$âþÊ…¥	€“SÞŸ
-'>^ÎöŸ@ÛœbÚWÐì2-9ËBÒ¡­O@Â	®O<òù–OHƒóŸ˜ø39ßt”:ŸŒ¤ã0¿€´³1ŸŒøƒ2ûtÄ¥Ù\ÔáÉ™å%Ô\ØÃ©­¥ÎŽ¢Ëƒ‹K’Q·§%¶–Ž£â2‘Åð;¨d|—°’`q´_÷é‚ûÝŸ7/ÉâœïuR|‡„çÊ9’yð ŠE+¼8êþûó·
-T¾:…Lîƒª¯nÔ~·GºØ.Úš²WÍÎºhöÈUãð©I<Pí¡†í–sí-„¡ƒ‚ñg5“GHÐPyy!ylAGqðim’kOÐ²:Šü¦6úõ×¨™ÇðhPv¦`0ölÁHg÷¾ pùOz¨zMrùßxÀ“{ÿØLš˜=7ÅõAî,á³iÃžòb@/ÇpYp€øvD· ±íÎã$XÆ¾m7)gK]©ý¯Ú#Ãæ[Sö·æ÷‡Ýzðé,1u
+xÚÍ›K›0Çïû)¨Úk¢®zÛkÒJ´m="cf³tS0éæÛ×	y xÆ¸EÄãÿ±ñxü(’"¬ Ü$ªOaUÅÖI¾ŠíC&â:…àcPô—Y¾È,}ß”Z|wCå¢:Ic­÷%qõ.¿À3«S¹:>þÆ¸å¡7PƒŽ[|<eUÜ›às­ S¥køQCxÖôÑp=7)õü4y‹îï®t¥å¦¨ö{Š?^batZ†Fª]†1·#˜i/YÄòXä{?€|ñ¨’ašT&&á"+R0-äñ,¼±rV°(I™¾ÊIir–MÜ6sh—Ll ”"Œ©ŽRB9-Pð:=A1É_¦å(wMÒX@ÈEË©y8$˜"‡a*øÄ¤Rëô!«Býî½k‚=MˆÐij” MS¢fš–Ið¥+b,MÉ—%Mé*ø€GÓ2jTMtà¢
+Q‚M€è*´ ƒÕûÙ4RII£¶ÔLúdßƒÌ§Û,6 Žý÷øÙPB½9•„®fw©ÓºÖØîÐSÃwõ-C¼:¿³fo ¿r[r¹LBx+’’É¤™o1)Ë$ªÕ$Å%Fch¾þP[ØB!·‹_0ÃÖsK˜Ä;gâ)°rfD¢‚y²çP´„Æ9V¢&/…š—Å³¢š¡£ç|Ø\È>mrŽe–ayÀC'c˜(y›s,lŠgÈá
+Ÿ°o¤…è&Z­aARx5ÐóúržÖü,;C)w«Ö”‘°³u@kAÅ@ÐÕŠàAäk¾T¸%™KKürLËº‹¡ów)LåÕ¸^–î³ú0‰Ñ‰½¢‹…¹™ ÌË1¡Ü³ðN	Ï >ŒQÇ%jÒº¦™˜ï—£t/¢"µ!å+ð&kï­\ˆ¸êLÊ|„É',cp‘?'ëº„	L8@Áž,°Œ°Kx&”§ïÉZ‘ái,òÜ'\2ÿIJ>Nêx;¨côÑDÜW°ôàäÔƒÏ×“¯* çëJÙPáºÍ.Ó’³<$íuú$l|úÄ#où„4Øöð‰‰ßÊòMGÙ×òÉHÚEòHÛRòÉˆß_²OGšÍEn8YBÍ…=,¶Ûêì(ºÜÏ°8$Ùu»É`kè8)®!OòÞ‚JÆ)‹ ÷Áñé¾\ð¸ûyw.¾+tQâ7¤\¨¤EŠðâ$¼8_uWFu¹Ü¯t¾»S“ÝÝb»8þÑT¼j¦ÕA3A®.šÂï<äÕËzn]¾ú3(UŸñÈ|•ó…ü`äv¿Žâà]xm’[wái¦‡†"_¢×F¿}=j<†¸Ù®Ayñýc÷äG»÷Ò»>B÷ÖÊBÏ%ÝüxÀÖYy¬‘&fÏéj}Ðs>x3mØÖÎ+´³c…3Áâýˆö Ñw×‹$XÆ¾97ÉòD}|#ñi«"|ÞŒ•š:«éUË°yÖØüjþÚ&ÿŸ‰±G
