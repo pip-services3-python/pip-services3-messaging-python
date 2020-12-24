@@ -61,8 +61,8 @@ class MessageEnvelop(object):
     def __str__(self):
         """
         Convert's this MessageEnvelope to a string, using the following format:
-        <code>"[<correlation_id>,<message_type>,<message.toString>]"</code>.
-        If any of the values are <code>null</code>, they will be replaced with <code>---</code>.
+        **"[<correlation_id>,<message_type>,<message.toString>]"**.
+        If any of the values are **None**, they will be replaced with **---**.
 
         :return: the generated string.
         """

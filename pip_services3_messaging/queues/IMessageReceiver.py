@@ -14,15 +14,18 @@ class IMessageReceiver:
     Callback interface to receive incoming messages.
 
     Example:
+
+    .. code-block:: python
+
         class MyMessageReceiver(IMessageReceiver):
             def receive_message(self, envelop, queue):
-                print "Received message: " + envelop.getMessageAsString()
+                print "Received message: " + envelop.get_message_as_string()
 
         messageQueue = MemoryMessageQueue()
         messageQueue.listen("123", MyMessageReceiver())
 
         messageQueue.open("123")
-        messageQueue.send("123", MessageEnvelop(None, "mymessage", "ABC")) // Output in console: "ABC"
+        messageQueue.send("123", MessageEnvelop(None, "mymessage", "ABC")) # Output in console: "ABC"
     """
     def receive_message(self, message, queue):
         raise NotImplementedError('Method from interface definition')

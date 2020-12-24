@@ -29,7 +29,6 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
     Abstract message queue that is used as a basis for specific message queue implementations.
 
     ### Configuration parameters ###
-
         - name:                        name of the message queue
         - connection(s):
             - discovery_key:             key to retrieve parameters from discovery service
@@ -46,10 +45,10 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
 
     ### References ###
 
-        - *:logger:*:*:1.0           (optional) ILogger components to pass log messages
-        - *:counters:*:*:1.0         (optional) ICounters components to pass collected measurements
-        - *:discovery:*:*:1.0        (optional) IDiscovery components to discover connection(s)
-        - *:credential-store:*:*:1.0 (optional) ICredentialStore componetns to lookup credential(s)
+        - *:logger:*:*:1.0           (optional) :class:`ILogger` components to pass log messages
+        - *:counters:*:*:1.0         (optional) :class:`ICounters` components to pass collected measurements
+        - *:discovery:*:*:1.0        (optional) :class:`IDiscovery` components to discover connection(s)
+        - *:credential-store:*:*:1.0 (optional) :class:`ICredentialStore` componetns to lookup credential(s)
     """
     _name = None
     _capabilities = None
@@ -142,7 +141,7 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
     def send_as_object(self, correlation_id, message_type, message):
         """
         Sends an object into the queue.
-        Before sending the object is converted into JSON string and wrapped in a [[MessageEnvelop]].
+        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelop`.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
 

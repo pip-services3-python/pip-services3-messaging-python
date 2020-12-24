@@ -17,7 +17,7 @@ class IMessageQueue(IOpenable, IClosable):
 
     Not all queues may implement all the methods.
     Attempt to call non-supported method will result in NotImplemented exception.
-    To verify if specific method is supported consult with [[MessagingCapabilities]].
+    To verify if specific method is supported consult with :class:`MessagingCapabilities`.
     """
     def get_name(self):
         """
@@ -56,7 +56,7 @@ class IMessageQueue(IOpenable, IClosable):
     def send_as_object(self, correlation_id, message_type, message):
         """
         Sends an object into the queue.
-        Before sending the object is converted into JSON string and wrapped in a [[MessageEnvelop]].
+        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelop`.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
 
@@ -164,7 +164,7 @@ class IMessageQueue(IOpenable, IClosable):
     def end_listen(self, correlation_id):
         """
         Ends listening for incoming messages.
-        When this method is call [[listen]] unblocks the thread and execution continues.
+        When this method is call :func:`listen` unblocks the thread and execution continues.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
         """

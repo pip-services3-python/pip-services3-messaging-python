@@ -23,21 +23,22 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
     This queue is typically used for testing to mock real queues.
 
     ### Configuration parameters ###
-
         - name:                        name of the message queue
 
     ### References ###
-
-        - *:logger:*:*:1.0           (optional) ILogger components to pass log messages
-        - *:counters:*:*:1.0         (optional) ICounters components to pass collected measurements
+        - *:logger:*:*:1.0           (optional) :class:`ILogger` components to pass log messages
+        - *:counters:*:*:1.0         (optional) :class:`ICounters` components to pass collected measurements
 
     Example:
+
+    .. code-block:: python
+
         queue = MessageQueue("myqueue")
         queue.send("123", MessageEnvelop(None, "mymessage", "ABC"))
 
         message = queue.receive("123", 0)
         if message != None:
-            ...
+            # ...
             queue.complete("123", message)
     """
     _default_lock_timeout = 30000
@@ -387,7 +388,7 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
     def end_listen(self, correlation_id):
         """
         Ends listening for incoming messages.
-        When this method is call [[listen]] unblocks the thread and execution continues.
+        When this method is call :func:`listen` unblocks the thread and execution continues.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
         """
