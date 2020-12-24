@@ -1,7 +1,0 @@
-pip\_services3\_messaging.build.DefaultMessagingFactory module
-==============================================================
-
-.. automodule:: pip_services3_messaging.build.DefaultMessagingFactory
-    :members:
-    :undoc-members:
-    :show-inheritance:

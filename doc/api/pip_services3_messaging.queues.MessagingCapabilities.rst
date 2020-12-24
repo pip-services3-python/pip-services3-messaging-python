@@ -1,7 +1,0 @@
-pip\_services3\_messaging.queues.MessagingCapabilities module
-=============================================================
-
-.. automodule:: pip_services3_messaging.queues.MessagingCapabilities
-    :members:
-    :undoc-members:
-    :show-inheritance:
