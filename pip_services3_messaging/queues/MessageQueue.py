@@ -44,11 +44,10 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         - access_key:                application secret key
 
     ### References ###
-
-        - *:logger:*:*:1.0           (optional) :class:`ILogger` components to pass log messages
-        - *:counters:*:*:1.0         (optional) :class:`ICounters` components to pass collected measurements
-        - *:discovery:*:*:1.0        (optional) :class:`IDiscovery` components to discover connection(s)
-        - *:credential-store:*:*:1.0 (optional) :class:`ICredentialStore` componetns to lookup credential(s)
+        - `*:logger:*:*:1.0`              (optional) :class:`ILogger <pip_services3_components.log.ILogger.ILogger>` components to pass log messages
+        - `*:counters:*:*:1.0`            (optional) :class:`ICounters <pip_services3_components.count.ICounters.ICounters>` components to pass collected measurements
+        - `*:discovery:*:*:1.0`           (optional) :class:`IDiscovery <pip_services3_components.connect.IDiscovery.IDiscovery>` components to discover connection(s)
+        - `*:credential-store:*:*:1.0`    (optional) :class:`ICredentialStore <pip_services3_components.auth.ICredentialStore.ICredentialStore>` componetns to lookup credential(s)
     """
     _name = None
     _capabilities = None
@@ -141,7 +140,7 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
     def send_as_object(self, correlation_id, message_type, message):
         """
         Sends an object into the queue.
-        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelop`.
+        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelop <pip_services3_messaging.MessageEnvelop.MessageEnvelop>`.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
 

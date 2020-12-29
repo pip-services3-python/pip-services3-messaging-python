@@ -17,7 +17,7 @@ class IMessageQueue(IOpenable, IClosable):
 
     Not all queues may implement all the methods.
     Attempt to call non-supported method will result in NotImplemented exception.
-    To verify if specific method is supported consult with :class:`MessagingCapabilities`.
+    To verify if specific method is supported consult with :class:`MessagingCapabilities <pip_services3_messaging.MessagingCapabilities.MessagingCapabilities>`.
     """
     def get_name(self):
         """
@@ -56,7 +56,7 @@ class IMessageQueue(IOpenable, IClosable):
     def send_as_object(self, correlation_id, message_type, message):
         """
         Sends an object into the queue.
-        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelop`.
+        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelop <pip_services3_messaging.MessageEnvelop.MessageEnvelop>`.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
 
