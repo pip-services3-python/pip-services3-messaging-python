@@ -8,7 +8,9 @@ Subpackages
    :maxdepth: 4
 
    pip_services3_messaging.build
+   pip_services3_messaging.connect
    pip_services3_messaging.queues
+   pip_services3_messaging.test
 
 Module contents
 ---------------

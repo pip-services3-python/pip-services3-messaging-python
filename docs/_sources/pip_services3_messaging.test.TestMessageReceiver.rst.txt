@@ -1,0 +1,7 @@
+pip\_services3\_messaging.test.TestMessageReceiver module
+=========================================================
+
+.. automodule:: pip_services3_messaging.test.TestMessageReceiver
+   :members:
+   :undoc-members:
+   :show-inheritance:

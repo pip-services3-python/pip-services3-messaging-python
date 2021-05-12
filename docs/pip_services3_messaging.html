@@ -90,7 +90,9 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">pip_services3_messaging package</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.build.html">pip_services3_messaging.build package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.connect.html">pip_services3_messaging.connect package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.queues.html">pip_services3_messaging.queues package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.test.html">pip_services3_messaging.test package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-pip_services3_messaging">Module contents</a><ul>
@@ -182,10 +184,12 @@
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.build.DefaultMessagingFactory.html#pip-services3-messaging-build-defaultmessagingfactory">pip_services3_messaging.build.DefaultMessagingFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.build.IMessageQueueFactory.html">pip_services3_messaging.build.IMessageQueueFactory module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.build.MemoryMessageQueueFactory.html">pip_services3_messaging.build.MemoryMessageQueueFactory module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.build.MemoryMessageQueueFactory.html#pip-services3-messaging-build-memorymessagequeuefactory">pip_services3_messaging.build.MemoryMessageQueueFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.build.MessageQueueFactory.html">pip_services3_messaging.build.MessageQueueFactory module</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.build.html#module-pip_services3_messaging.build">Module contents</a><ul>
@@ -194,8 +198,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.connect.html">pip_services3_messaging.connect package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.connect.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.connect.IMessageQueueConnection.html">pip_services3_messaging.connect.IMessageQueueConnection module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.connect.html#module-pip_services3_messaging.connect">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.html">pip_services3_messaging.queues package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.queues.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.CachedMessageQueue.html">pip_services3_messaging.queues.CachedMessageQueue module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.CallbackMessageReceiver.html">pip_services3_messaging.queues.CallbackMessageReceiver module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html">pip_services3_messaging.queues.IMessageQueue module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html#pip-services3-messaging-queues-imessageqeueue">pip_services3_messaging.queues.IMessageQeueue</a></li>
 </ul>
@@ -204,14 +218,12 @@
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.queues.IMessageReceiver.html#pip-services3-messaging-queues-imessagereceiver">pip_services3_messaging.queues.IMessageReceiver</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.LockedMessage.html">pip_services3_messaging.queues.LockedMessage module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.MemoryMessageQueue.html">pip_services3_messaging.queues.MemoryMessageQueue module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.queues.MemoryMessageQueue.html#pip-services3-messaging-queues-memorymessagequeue">pip_services3_messaging.queues.MemoryMessageQueue</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelop.html">pip_services3_messaging.queues.MessageEnvelop module</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelop.html#pip-services3-messaging-queues-messageenvelop">pip_services3_messaging.queues.MessageEnvelop</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html">pip_services3_messaging.queues.MessageEnvelope module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.MessageQueue.html">pip_services3_messaging.queues.MessageQueue module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.queues.MessageQueue.html#pip-services3-messaging-queues-messageqeueue">pip_services3_messaging.queues.MessageQeueue</a></li>
 </ul>
@@ -226,6 +238,14 @@
 <li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.queues.html#pip-services3-messaging-queues-init">pip_services3_messaging.queues.__init__</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.test.html">pip_services3_messaging.test package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.test.html#submodules">Submodules</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.test.TestMessageReceiver.html">pip_services3_messaging.test.TestMessageReceiver module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.test.html#module-pip_services3_messaging.test">Module contents</a></li>
 </ul>
 </li>
 </ul>

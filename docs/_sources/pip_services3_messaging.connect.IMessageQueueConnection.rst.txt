@@ -1,0 +1,7 @@
+pip\_services3\_messaging.connect.IMessageQueueConnection module
+================================================================
+
+.. automodule:: pip_services3_messaging.connect.IMessageQueueConnection
+   :members:
+   :undoc-members:
+   :show-inheritance:

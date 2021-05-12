@@ -1,0 +1,7 @@
+pip\_services3\_messaging.queues.LockedMessage module
+=====================================================
+
+.. automodule:: pip_services3_messaging.queues.LockedMessage
+   :members:
+   :undoc-members:
+   :show-inheritance:

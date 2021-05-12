@@ -90,7 +90,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="pip_services3_messaging.html">pip_services3_messaging package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="pip_services3_messaging.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">pip_services3_messaging.build package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.connect.html">pip_services3_messaging.connect package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.queues.html">pip_services3_messaging.queues package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.test.html">pip_services3_messaging.test package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.html#module-pip_services3_messaging">Module contents</a></li>
@@ -179,10 +181,12 @@
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.build.DefaultMessagingFactory.html#pip-services3-messaging-build-defaultmessagingfactory">pip_services3_messaging.build.DefaultMessagingFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.build.IMessageQueueFactory.html">pip_services3_messaging.build.IMessageQueueFactory module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.build.MemoryMessageQueueFactory.html">pip_services3_messaging.build.MemoryMessageQueueFactory module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.build.MemoryMessageQueueFactory.html#pip-services3-messaging-build-memorymessagequeuefactory">pip_services3_messaging.build.MemoryMessageQueueFactory</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.build.MessageQueueFactory.html">pip_services3_messaging.build.MessageQueueFactory module</a></li>
 </ul>
 </div>
 </div>
@@ -205,14 +209,43 @@
 <dd><p>Bases: <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.build.Factory.html#pip_services3_components.build.Factory.Factory" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_components.build.Factory.Factory</span></code></a></p>
 <p>Creates <a class="reference internal" href="pip_services3_messaging.queues.MemoryMessageQueue.html#pip_services3_messaging.queues.MemoryMessageQueue.MemoryMessageQueue" title="pip_services3_messaging.queues.MemoryMessageQueue.MemoryMessageQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">MemoryMessageQueue</span></code></a> components by their descriptors.
 Name of created message queue is taken from its descriptor.</p>
+<dl class="py attribute">
+<dt id="pip_services3_messaging.build.DefaultMessagingFactory.MemoryMessageQueueDescriptor">
+<code class="sig-name descname">MemoryMessageQueueDescriptor</code><em class="property"> = &lt;pip_services3_commons.refer.Descriptor.Descriptor object&gt;</em><a class="headerlink" href="#pip_services3_messaging.build.DefaultMessagingFactory.MemoryMessageQueueDescriptor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="pip_services3_messaging.build.DefaultMessagingFactory.MemoryMessageQueueFactoryDescriptor">
+<code class="sig-name descname">MemoryMessageQueueFactoryDescriptor</code><em class="property"> = &lt;pip_services3_commons.refer.Descriptor.Descriptor object&gt;</em><a class="headerlink" href="#pip_services3_messaging.build.DefaultMessagingFactory.MemoryMessageQueueFactoryDescriptor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt id="pip_services3_messaging.build.MemoryMessageQueueFactory">
 <em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.build.</code><code class="sig-name descname">MemoryMessageQueueFactory</code><a class="headerlink" href="#pip_services3_messaging.build.MemoryMessageQueueFactory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.build.Factory.html#pip_services3_components.build.Factory.Factory" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_components.build.Factory.Factory</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="pip_services3_messaging.build.MessageQueueFactory.html#pip_services3_messaging.build.MessageQueueFactory.MessageQueueFactory" title="pip_services3_messaging.build.MessageQueueFactory.MessageQueueFactory"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_messaging.build.MessageQueueFactory.MessageQueueFactory</span></code></a></p>
 <p>Creates <a class="reference internal" href="pip_services3_messaging.queues.MemoryMessageQueue.html#pip_services3_messaging.queues.MemoryMessageQueue.MemoryMessageQueue" title="pip_services3_messaging.queues.MemoryMessageQueue.MemoryMessageQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">MemoryMessageQueue</span></code></a> components by their descriptors.
 Name of created message queue is taken from its descriptor.</p>
+<dl class="py attribute">
+<dt id="pip_services3_messaging.build.MemoryMessageQueueFactory.MemoryQueueDescriptor">
+<code class="sig-name descname">MemoryQueueDescriptor</code><em class="property"> = &lt;pip_services3_commons.refer.Descriptor.Descriptor object&gt;</em><a class="headerlink" href="#pip_services3_messaging.build.MemoryMessageQueueFactory.MemoryQueueDescriptor" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.build.MemoryMessageQueueFactory.create_queue">
+<code class="sig-name descname">create_queue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html#pip_services3_messaging.queues.IMessageQueue.IMessageQueue" title="pip_services3_messaging.queues.IMessageQueue.IMessageQueue">pip_services3_messaging.queues.IMessageQueue.IMessageQueue</a><a class="headerlink" href="#pip_services3_messaging.build.MemoryMessageQueueFactory.create_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a message queue component and assigns its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>name</strong> – a name of the created message queue.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>IMessageQueue instance</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </div>

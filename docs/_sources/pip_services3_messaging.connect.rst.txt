@@ -1,0 +1,18 @@
+pip\_services3\_messaging.connect package
+=========================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_messaging.connect.IMessageQueueConnection
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_messaging.connect
+   :members:
+   :undoc-members:
+   :show-inheritance:

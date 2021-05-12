@@ -7,10 +7,13 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   pip_services3_messaging.queues.CachedMessageQueue
+   pip_services3_messaging.queues.CallbackMessageReceiver
    pip_services3_messaging.queues.IMessageQueue
    pip_services3_messaging.queues.IMessageReceiver
+   pip_services3_messaging.queues.LockedMessage
    pip_services3_messaging.queues.MemoryMessageQueue
-   pip_services3_messaging.queues.MessageEnvelop
+   pip_services3_messaging.queues.MessageEnvelope
    pip_services3_messaging.queues.MessageQueue
    pip_services3_messaging.queues.MessagingCapabilities
 
