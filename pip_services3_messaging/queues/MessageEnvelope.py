@@ -66,7 +66,7 @@ class MessageEnvelope:
 
     def get_message_as_string(self) -> Optional[str]:
         """
-        TODO add description
+        Returns string the information stored in this message as a UTF-8 encoded string.
 
         :return: the information stored in this message as a UTF-8 encoded string.
         """
@@ -82,7 +82,7 @@ class MessageEnvelope:
 
     def get_message_as(self) -> Any:
         """
-        TODO add description
+        Returns any the value that was stored in this message as a JSON string.
 
         :return: the value that was stored in this message as a JSON string.
         """

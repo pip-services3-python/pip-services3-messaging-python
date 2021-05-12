@@ -12,7 +12,7 @@ from typing import Optional, Any, List
 
 from pip_services3_commons.run import IOpenable, IClosable
 
-from pip_services3_messaging.queues import MessagingCapabilities, IMessageReceiver, IMessageQueue
+from pip_services3_messaging.queues import MessagingCapabilities, IMessageReceiver
 from pip_services3_messaging.queues.MessageEnvelope import MessageEnvelope
 
 

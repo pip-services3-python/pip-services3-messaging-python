@@ -112,14 +112,14 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         credential = self._credential_resolver.lookup(correlation_id)
         self._open_with_params(correlation_id, connection, credential)
 
-    def _open_with_params(self, correlation_id: Optional[str], connection: List[ConnectionParams],
+    def _open_with_params(self, correlation_id: Optional[str], connections: List[ConnectionParams],
                           credential: CredentialParams):
         """
         Opens the component with given connection and credential parameters.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
 
-        :param connection: connection parameters
+        :param connections: connection parameters
 
         :param credential: credential parameters
         """

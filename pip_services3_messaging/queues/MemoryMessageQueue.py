@@ -67,7 +67,7 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
         self.__lock_token_sequence = 0
         self.__listen_interval = 1000
 
-    def is_open(self):
+    def is_open(self) -> bool:
         """
         Checks if the component is opened.
 
@@ -75,14 +75,14 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
         """
         return self.__opened
 
-    def _open_with_params(self, correlation_id: Optional[str], connection: List[ConnectionParams],
+    def _open_with_params(self, correlation_id: Optional[str], connections: List[ConnectionParams],
                           credentials: CredentialParams):
         """
         Opens the component with given connection and credential parameters.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
 
-        :param connection: connection parameters
+        :param connections: connection parameters
 
         :param credentials: credential parameters
         """
@@ -135,7 +135,7 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
         """
         return len(self.__messages)
 
-    def send(self, correlation_id, message):
+    def send(self, correlation_id: Optional[str], message: MessageEnvelope):
         """
         Sends a message into the queue.
 
@@ -361,7 +361,7 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
             except Exception as ex:
                 self._logger.error(correlation_id, ex, "Failed to process the message")
 
-    def end_listen(self, correlation_id):
+    def end_listen(self, correlation_id: Optional[str]):
         """
         Ends listening for incoming messages.
         When this method is call :func:`listen` unblocks the thread and execution continues.
