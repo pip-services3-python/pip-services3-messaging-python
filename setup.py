@@ -18,7 +18,7 @@ from setuptools import find_packages
     
 setup(
     name='pip_services3_messaging',
-    version='3.0.3',
+    version='3.1.0',
     url='http://github.com/pip-services3-python/pip-services3-messaging-python',
     license='MIT',
     author='Conceptual Vision Consulting LLC',

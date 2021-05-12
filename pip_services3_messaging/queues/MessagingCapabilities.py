@@ -9,121 +9,106 @@
     :license: MIT, see LICENSE for more details.
 """
 
+
 class MessagingCapabilities(object):
     """
     Data object that contains supported capabilities of a message queue.
     If certain capability is not supported a queue will throw NotImplemented exception.
     """
-    _message_count = None
-    _send = None
-    _receive = None
-    _peek = None
-    _peek_batch = None
-    _renew_lock = None
-    _abandon = None
-    _dead_letter = None
-    _clear = None
 
-    def __init__(self, message_count, send, receive, peek, peek_batch, renew_lock, abandon, dead_letter, clear):
+    def __init__(self, message_count: bool, send: bool, receive: bool, peek: bool, peek_batch: bool, renew_lock: bool,
+                 abandon: bool, dead_letter: bool, clear: bool):
         """
         Creates a new instance of the capabilities object.
 
         :param message_count: true if queue supports reading message count.
-
         :param send: true if queue is able to send messages.
-
         :param receive: true if queue is able to receive messages.
-
         :param peek: true if queue is able to peek messages.
-
         :param peek_batch: true if queue is able to peek multiple messages in one batch.
-
         :param renew_lock: true if queue is able to renew message lock.
-
         :param abandon: true if queue is able to abandon messages.
-
         :param dead_letter: true if queue is able to send messages to dead letter queue.
-
         :param clear: true if queue can be cleared.
         """
-        self._message_count = message_count
-        self._send = send
-        self._receive = receive
-        self._peek = peek
-        self._peek_batch = peek_batch
-        self._renew_lock = renew_lock
-        self._abandon = abandon
-        self._dead_letter = dead_letter
-        self._clear = clear
+        self.__message_count = message_count
+        self.__send = send
+        self.__receive = receive
+        self.__peek = peek
+        self.__peek_batch = peek_batch
+        self.__renew_lock = renew_lock
+        self.__abandon = abandon
+        self.__dead_letter = dead_letter
+        self.__clear = clear
 
-    def can_message_count(self):
+    def can_message_count(self) -> bool:
         """
         Informs if the queue is able to read number of messages.
 
         :return: true if queue supports reading message count.
         """
-        return self._message_count
+        return self.__message_count
 
-    def can_send(self):
+    def can_send(self) -> bool:
         """
         Informs if the queue is able to send messages.
 
         :return: true if queue is able to send messages.
         """
-        return self._send
+        return self.__send
 
-    def can_receive(self):
+    def can_receive(self) -> bool:
         """
         Informs if the queue is able to receive messages.
 
         :return: true if queue is able to receive messages.
         """
-        return self._receive
+        return self.__receive
 
-    def can_peek(self):
+    def can_peek(self) -> bool:
         """
         Informs if the queue is able to peek messages.
 
         :return: true if queue is able to peek messages.
         """
-        return self._peek
+        return self.__peek
 
-    def can_peek_batch(self):
+    def can_peek_batch(self) -> bool:
         """
         Informs if the queue is able to peek multiple messages in one batch.
 
         :return: true if queue is able to peek multiple messages in one batch.
         """
-        return self._peek_batch
+        return self.__peek_batch
 
-    def can_renew_lock(self):
+    def can_renew_lock(self) -> bool:
         """
         Informs if the queue is able to renew message lock.
 
         :return: true if queue is able to renew message lock.
         """
-        return self._renew_lock
+        return self.__renew_lock
 
-    def can_abandon(self):
+    def can_abandon(self) -> bool:
         """
         Informs if the queue is able to abandon messages.
 
         :return: true if queue is able to abandon.
         """
-        return self._abandon
+        return self.__abandon
 
-    def can_dead_letter(self):
+    def can_dead_letter(self) -> bool:
         """
         Informs if the queue is able to send messages to dead letter queue.
 
         :return: true if queue is able to send messages to dead letter queue.
         """
-        return self._dead_letter
+        return self.__dead_letter
 
-    def can_clear(self):
+    def can_clear(self) -> bool:
         """
         Informs if the queue can be cleared.
 
         :return: true if queue can be cleared.
         """
-        return self._clear
+        return self.__clear

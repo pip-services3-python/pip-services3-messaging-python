@@ -10,17 +10,21 @@
 """
 
 import threading
+from abc import abstractmethod
+from typing import Optional, List, Any
 
-from pip_services3_commons.config import IConfigurable, NameResolver
-from pip_services3_commons.refer import IReferenceable
-from pip_services3_commons.run import IOpenable, IClosable
-from pip_services3_components.log import CompositeLogger
+from pip_services3_commons.config import IConfigurable, NameResolver, ConfigParams
+from pip_services3_commons.errors import InvalidStateException
+from pip_services3_commons.refer import IReferenceable, IReferences
+from pip_services3_components.auth import CredentialResolver, CredentialParams
+from pip_services3_components.connect import ConnectionResolver, ConnectionParams
 from pip_services3_components.count import CompositeCounters
-from pip_services3_components.auth import CredentialResolver
-from pip_services3_components.connect import ConnectionResolver
+from pip_services3_components.log import CompositeLogger
 
-from .MessageEnvelop import MessageEnvelop
+from pip_services3_messaging.queues import MessagingCapabilities, IMessageReceiver
 from .IMessageQueue import IMessageQueue
+from .MessageEnvelope import MessageEnvelope
+
 
 class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
     """
@@ -49,29 +53,26 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         - `*:discovery:*:*:1.0`           (optional) :class:`IDiscovery <pip_services3_components.connect.IDiscovery.IDiscovery>` components to discover connection(s)
         - `*:credential-store:*:*:1.0`    (optional) :class:`ICredentialStore <pip_services3_components.auth.ICredentialStore.ICredentialStore>` componetns to lookup credential(s)
     """
-    _name = None
-    _capabilities = None
-    _lock = None
-    _logger = None
-    _counters = None
-    _credential_resolver = None
-    _connection_resolver = None
 
-    def __init__(self, name = None):
+    def __init__(self, name: str = None, capabilities: MessagingCapabilities = None):
         """
         Creates a new instance of the message queue.
 
         :param name: (optional) a queue name
+        :param capabilities: (optional) a capabilities of this message queue
         """
-        self._lock = threading.Lock()
-        self._logger = CompositeLogger()
-        self._counters = CompositeCounters()
-        self._connection_resolver = ConnectionResolver()
-        self._credential_resolver = CredentialResolver()
-        self._name = name
+        self._lock: threading.Lock = threading.Lock()
+        self._event = threading.Event()
+        self._capabilities: MessagingCapabilities = None
+        self._logger: CompositeLogger = CompositeLogger()
+        self._counters: CompositeCounters = CompositeCounters()
+        self._connection_resolver: ConnectionResolver = ConnectionResolver()
+        self._credential_resolver: CredentialResolver = CredentialResolver()
+        self._name: str = name
+        self._capabilities = capabilities or \
+                             MessagingCapabilities(False, False, False, False, False, False, False, False, False)
 
-
-    def configure(self, config):
+    def configure(self, config: ConfigParams):
         """
         Configures component by passing configuration parameters.
 
@@ -82,8 +83,7 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         self._credential_resolver.configure(config)
         self._connection_resolver.configure(config)
 
-
-    def set_references(self, references):
+    def set_references(self, references: IReferences):
         """
         Sets references to dependent components.
 
@@ -94,19 +94,26 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         self._credential_resolver.set_references(references)
         self._connection_resolver.set_references(references)
 
+    @abstractmethod
+    def is_open(self) -> bool:
+        """
+        Checks if the component is opened.
 
-    def open(self, correlation_id):
+        :return: true if the component has been opened and false otherwise.
+        """
+
+    def open(self, correlation_id: Optional[str]):
         """
         Opens the component.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
         """
-        connection = self._connection_resolver.resolve(correlation_id)
+        connection = self._connection_resolver.resolve_all(correlation_id)
         credential = self._credential_resolver.lookup(correlation_id)
         self._open_with_params(correlation_id, connection, credential)
 
-
-    def _open_with_params(self, correlation_id, connection, credential):
+    def _open_with_params(self, correlation_id: Optional[str], connection: List[ConnectionParams],
+                          credential: CredentialParams):
         """
         Opens the component with given connection and credential parameters.
 
@@ -118,17 +125,28 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         """
         raise NotImplementedError('Abstract method that shall be overriden')
 
+    def _check_open(self, correlation_id: Optional[str]):
+        """
+        Checks if the queue has been opened and throws an exception is it's not.
 
-    def get_name(self):
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        """
+        if not self.is_open():
+            raise InvalidStateException(
+                correlation_id,
+                "NOT_OPENED",
+                "The queue is not opened"
+            )
+
+    def get_name(self) -> str:
         """
         Gets the queue name
 
         :return: the queue name.
         """
-        return self._name if self._name != None else "undefined"
+        return self._name if self._name is not None else "undefined"
 
-
-    def get_capabilities(self):
+    def get_capabilities(self) -> MessagingCapabilities:
         """
         Gets the queue capabilities
 
@@ -136,11 +154,10 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         """
         return self._capabilities
 
-
-    def send_as_object(self, correlation_id, message_type, message):
+    def send_as_object(self, correlation_id: Optional[str], message_type: str, message: Any):
         """
         Sends an object into the queue.
-        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelop <pip_services3_messaging.MessageEnvelop.MessageEnvelop>`.
+        Before sending the object is converted into JSON string and wrapped in a :class:`MessageEnvelope <pip_services3_messaging.MessageEnvelope.MessageEnvelope>`.
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
 
@@ -148,11 +165,10 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
 
         :param message: an object value to be sent
         """
-        envelop = MessageEnvelop(correlation_id, message_type, message)
+        envelop = MessageEnvelope(correlation_id, message_type, message)
         self.send(correlation_id, envelop)
 
-
-    def begin_listen(self, correlation_id, receiver):
+    def begin_listen(self, correlation_id: Optional[str], receiver: IMessageReceiver):
         """
         Listens for incoming messages without blocking the current thread.
 
@@ -165,10 +181,137 @@ class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):
         thread.daemon = True
         thread.start()
 
-    def __str__(self):
+    def to_string(self) -> str:
         """
         Gets a string representation of the object.
 
         :return: a string representation of the object.
         """
         return "[" + self.get_name() + "]"
+
+    def __str__(self):
+        """
+        Gets a string representation of the object.
+
+        :return: a string representation of the object.
+        """
+        return self.to_string()
+
+    @abstractmethod
+    def close(self, correlation_id: Optional[str]):
+        """
+        Closes component and frees used resources.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        """
+
+    @abstractmethod
+    def clear(self, correlation_id: Optional[str]):
+        """
+        Clears component state.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        """
+
+    @abstractmethod
+    def read_message_count(self) -> int:
+        """
+        Reads the current number of messages in the queue to be delivered.
+
+        :return: a number of messages in the queue.
+        """
+
+    @abstractmethod
+    def send(self, correlation_id: Optional[str], envelop: MessageEnvelope):
+        """
+        Sends a message into the queue.
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        :param envelop: a message envelop to be sent.
+        """
+
+    @abstractmethod
+    def peek(self, correlation_id: Optional[str]) -> MessageEnvelope:
+        """
+        Peeks a single incoming message from the queue without removing it.
+        If there are no messages available in the queue it returns `None`.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        :return: a peeked message or `None`.
+        """
+
+    @abstractmethod
+    def peek_batch(self, correlation_id: Optional[str], message_count: int) -> List[MessageEnvelope]:
+        """
+        Peeks multiple incoming messages from the queue without removing them.
+        If there are no messages available in the queue it returns an empty list.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        :param message_count: a maximum number of messages to peek.
+        :return: a list of peeked messages
+        """
+
+    @abstractmethod
+    def receive(self, correlation_id: Optional[str], wait_timeout: int) -> MessageEnvelope:
+        """
+
+        Receives an incoming message and removes it from the queue.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        :param wait_timeout: a timeout in milliseconds to wait for a message to come.
+        :return: a received message or `None`.
+        """
+
+    @abstractmethod
+    def renew_lock(self, message: MessageEnvelope, lock_timeout: int):
+        """
+        Renews a lock on a message that makes it invisible from other receivers in the queue.
+        This method is usually used to extend the message processing time.
+
+        :param message: a message to extend its lock.
+        :param lock_timeout: a locking timeout in milliseconds.
+        """
+
+    @abstractmethod
+    def complete(self, message: MessageEnvelope):
+        """
+        Permanently removes a message from the queue.
+        This method is usually used to remove the message after successful processing.
+        :param message: a message to remove.
+        """
+
+    @abstractmethod
+    def abandon(self, message: MessageEnvelope):
+        """
+        Returnes message into the queue and makes it available for all subscribers to receive it again.
+        This method is usually used to return a message which could not be processed at the moment
+        to repeat the attempt. Messages that cause unrecoverable errors shall be removed permanently
+        or/and send to dead letter queue.
+
+        :param message: a message to return.
+        """
+
+    @abstractmethod
+    def move_to_dead_letter(self, message: MessageEnvelope):
+        """
+        Permanently removes a message from the queue and sends it to dead letter queue.
+
+        :param message: a message to be removed.
+        """
+
+    @abstractmethod
+    def listen(self, correlation_id: Optional[str], receiver: IMessageReceiver):
+        """
+        Listens for incoming messages and blocks the current thread until queue is closed.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        :param receiver: a receiver to receive incoming messages.
+        """
+
+    @abstractmethod
+    def end_listen(self, correlation_id: Optional[str]):
+        """
+        Ends listening for incoming messages.
+        When this method is call **listen** unblocks the thread and execution continues.
+
+        :param correlation_id: (optional) transaction id to trace execution through call chain.
+        """

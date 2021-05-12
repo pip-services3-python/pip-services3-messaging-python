@@ -11,12 +11,12 @@
 
 
 __all__ = [
-    'IMessageQueue', 'MessageEnvelop', 'MessagingCapabilities',
+    'IMessageQueue', 'MessageEnvelope', 'MessagingCapabilities',
     'IMessageReceiver', 'MessageQueue', 'MemoryMessageQueue'
 ]
 
 from .IMessageQueue import IMessageQueue
-from .MessageEnvelop import MessageEnvelop
+from .MessageEnvelope import MessageEnvelope
 from .MessagingCapabilities import MessagingCapabilities
 from .IMessageReceiver import IMessageReceiver
 from .MessageQueue import MessageQueue
