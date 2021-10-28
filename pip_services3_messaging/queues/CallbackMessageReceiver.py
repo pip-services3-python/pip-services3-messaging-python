@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 from typing import Callable
 
-from pip_services3_messaging.queues import IMessageReceiver, MessageEnvelope, IMessageQueue
+from .IMessageQueue import IMessageQueue
+from .IMessageReceiver import IMessageReceiver
+from .MessageEnvelope import MessageEnvelope
 
 
 class CallbackMessageReceiver(IMessageReceiver):

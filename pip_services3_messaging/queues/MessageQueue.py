@@ -21,9 +21,10 @@ from pip_services3_components.connect import ConnectionResolver, ConnectionParam
 from pip_services3_components.count import CompositeCounters
 from pip_services3_components.log import CompositeLogger
 
-from pip_services3_messaging.queues import MessagingCapabilities, IMessageReceiver
 from .IMessageQueue import IMessageQueue
+from .IMessageReceiver import IMessageReceiver
 from .MessageEnvelope import MessageEnvelope
+from .MessagingCapabilities import MessagingCapabilities
 
 
 class MessageQueue(IConfigurable, IReferenceable, IMessageQueue):

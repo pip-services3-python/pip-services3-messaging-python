@@ -16,7 +16,8 @@ class MessagingCapabilities:
     If certain capability is not supported a queue will throw NotImplemented exception.
     """
 
-    def __init__(self, can_message_count: bool, can_send: bool, can_receive: bool, can_peek: bool, can_peek_batch: bool, can_renew_lock: bool,
+    def __init__(self, can_message_count: bool, can_send: bool, can_receive: bool, can_peek: bool, can_peek_batch: bool,
+                 can_renew_lock: bool,
                  can_abandon: bool, can_dead_letter: bool, can_clear: bool):
         """
         Creates a new instance of the capabilities object.

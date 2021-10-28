@@ -7,7 +7,10 @@ from typing import List, Optional
 from pip_services3_commons.config import ConfigParams
 from pip_services3_commons.run import ICleanable
 
-from pip_services3_messaging.queues import MessageQueue, MessagingCapabilities, MessageEnvelope, IMessageReceiver
+from .IMessageReceiver import IMessageReceiver
+from .MessageEnvelope import MessageEnvelope
+from .MessageQueue import MessageQueue
+from .MessagingCapabilities import MessagingCapabilities
 
 
 class CachedMessageQueue(MessageQueue, ICleanable):

@@ -17,9 +17,9 @@ from pip_services3_commons.run import ICleanable
 from pip_services3_components.auth import CredentialParams
 from pip_services3_components.connect import ConnectionParams
 
-from pip_services3_messaging.queues import IMessageReceiver
-from . import MessageEnvelope
+from .IMessageReceiver import IMessageReceiver
 from .LockedMessage import LockedMessage
+from .MessageEnvelope import MessageEnvelope
 from .MessageQueue import MessageQueue
 from .MessagingCapabilities import MessagingCapabilities
 
