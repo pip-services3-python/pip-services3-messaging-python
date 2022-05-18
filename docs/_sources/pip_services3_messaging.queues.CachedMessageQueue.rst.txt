@@ -1,0 +1,7 @@
+pip\_services3\_messaging.queues.CachedMessageQueue module
+==========================================================
+
+.. automodule:: pip_services3_messaging.queues.CachedMessageQueue
+   :members:
+   :undoc-members:
+   :show-inheritance:

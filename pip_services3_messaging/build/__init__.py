@@ -10,7 +10,10 @@
 """
 
 
-__all__ = ['MemoryMessageQueueFactory', 'DefaultMessagingFactory']
+__all__ = ['MemoryMessageQueueFactory', 'DefaultMessagingFactory',
+           'IMessageQueueFactory', 'MessageQueueFactory']
 
 from .DefaultMessagingFactory import DefaultMessagingFactory
+from .IMessageQueueFactory import IMessageQueueFactory
 from .MemoryMessageQueueFactory import MemoryMessageQueueFactory
+from .MessageQueueFactory import MessageQueueFactory

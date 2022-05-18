@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>pip_services3_messaging.queues package &mdash; pip-services3-messaging  documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,14 +32,15 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="pip_services3_messaging.queues.IMessageQueue module" href="pip_services3_messaging.queues.IMessageQueue.html" />
-    <link rel="prev" title="pip_services3_messaging.build.MemoryMessageQueueFactory module" href="pip_services3_messaging.build.MemoryMessageQueueFactory.html" /> 
+    <link rel="next" title="pip_services3_messaging.queues.CachedMessageQueue module" href="pip_services3_messaging.queues.CachedMessageQueue.html" />
+    <link rel="prev" title="pip_services3_messaging.connect.IMessageQueueConnection module" href="pip_services3_messaging.connect.IMessageQueueConnection.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -50,7 +54,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> pip-services3-messaging
+            <a href="index.html" class="icon icon-home"> pip-services3-messaging
           
 
           
@@ -86,7 +90,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="pip_services3_messaging.html">pip_services3_messaging package</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="pip_services3_messaging.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.build.html">pip_services3_messaging.build package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.connect.html">pip_services3_messaging.connect package</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">pip_services3_messaging.queues package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_messaging.test.html">pip_services3_messaging.test package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pip_services3_messaging.html#module-pip_services3_messaging">Module contents</a></li>
@@ -134,6 +140,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -149,7 +157,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/pip_services3_messaging.queues.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -169,6 +177,8 @@
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.CachedMessageQueue.html">pip_services3_messaging.queues.CachedMessageQueue module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.CallbackMessageReceiver.html">pip_services3_messaging.queues.CallbackMessageReceiver module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html">pip_services3_messaging.queues.IMessageQueue module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html#pip-services3-messaging-queues-imessageqeueue">pip_services3_messaging.queues.IMessageQeueue</a></li>
 </ul>
@@ -177,14 +187,12 @@
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.queues.IMessageReceiver.html#pip-services3-messaging-queues-imessagereceiver">pip_services3_messaging.queues.IMessageReceiver</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.LockedMessage.html">pip_services3_messaging.queues.LockedMessage module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.MemoryMessageQueue.html">pip_services3_messaging.queues.MemoryMessageQueue module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.queues.MemoryMessageQueue.html#pip-services3-messaging-queues-memorymessagequeue">pip_services3_messaging.queues.MemoryMessageQueue</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelop.html">pip_services3_messaging.queues.MessageEnvelop module</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelop.html#pip-services3-messaging-queues-messageenvelop">pip_services3_messaging.queues.MessageEnvelop</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html">pip_services3_messaging.queues.MessageEnvelope module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pip_services3_messaging.queues.MessageQueue.html">pip_services3_messaging.queues.MessageQueue module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pip_services3_messaging.queues.MessageQueue.html#pip-services3-messaging-queues-messageqeueue">pip_services3_messaging.queues.MessageQeueue</a></li>
 </ul>
@@ -212,14 +220,16 @@
 <dl class="py class">
 <dt id="pip_services3_messaging.queues.IMessageQueue">
 <em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">IMessageQueue</code><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.IOpenable.IOpenable</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.IClosable.IClosable</span></code></p>
+<dd><p>Bases: <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.run.IOpenable.html#pip_services3_commons.run.IOpenable.IOpenable" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.IOpenable.IOpenable</span></code></a>, <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.run.IClosable.html#pip_services3_commons.run.IClosable.IClosable" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.IClosable.IClosable</span></code></a></p>
 <p>Interface for asynchronous message queues.</p>
 <p>Not all queues may implement all the methods.
 Attempt to call non-supported method will result in NotImplemented exception.
-To verify if specific method is supported consult with <a class="reference internal" href="pip_services3_messaging.queues.MessagingCapabilities.html#module-pip_services3_messaging.queues.MessagingCapabilities" title="pip_services3_messaging.queues.MessagingCapabilities"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessagingCapabilities</span></code></a>.</p>
+To verify if specific method is supported consult with <a class="reference internal" href="pip_services3_messaging.queues.MessagingCapabilities.html#pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities" title="pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessagingCapabilities</span></code></a>.</p>
+<p>See <a class="reference internal" href="pip_services3_messaging.queues.MessagingCapabilities.html#pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities" title="pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessagingCapabilities</span></code></a>,
+<a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageEnvelope</span></code></a></p>
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.abandon">
-<code class="sig-name descname">abandon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.abandon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">abandon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.abandon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returnes message into the queue and makes it available for all subscribers to receive it again.
 This method is usually used to return a message which could not be processed at the moment
 to repeat the attempt. Messages that cause unrecoverable errors shall be removed permanently
@@ -233,7 +243,7 @@ or/and send to dead letter queue.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.begin_listen">
-<code class="sig-name descname">begin_listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">receiver</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.begin_listen" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">begin_listen</code><span class="sig-paren">(</span><em class="sig-param">correlation_id: Optional[str], receiver: &lt;module 'pip_services3_messaging.queues.IMessageReceiver' from '/pip_services3_messaging/queues/IMessageReceiver.py'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.begin_listen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Listens for incoming messages without blocking the current thread.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -247,7 +257,7 @@ or/and send to dead letter queue.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.complete">
-<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.complete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.complete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Permanently removes a message from the queue.
 This method is usually used to remove the message after successful processing.</p>
 <dl class="field-list simple">
@@ -259,7 +269,7 @@ This method is usually used to remove the message after successful processing.</
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.end_listen">
-<code class="sig-name descname">end_listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.end_listen" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">end_listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.end_listen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ends listening for incoming messages.
 When this method is call <a class="reference internal" href="#pip_services3_messaging.queues.IMessageQueue.listen" title="pip_services3_messaging.queues.IMessageQueue.listen"><code class="xref py py-func docutils literal notranslate"><span class="pre">listen()</span></code></a> unblocks the thread and execution continues.</p>
 <dl class="field-list simple">
@@ -271,7 +281,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.get_capabilities">
-<code class="sig-name descname">get_capabilities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.get_capabilities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_capabilities</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; &lt;module ‘pip_services3_messaging.queues.MessagingCapabilities’ from ‘/pip_services3_messaging/queues/MessagingCapabilities.py’&gt;<a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.get_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the queue capabilities</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -282,7 +292,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.get_name">
-<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.get_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.get_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the queue name</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -293,7 +303,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.listen">
-<code class="sig-name descname">listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">receiver</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.listen" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">listen</code><span class="sig-paren">(</span><em class="sig-param">correlation_id: Optional[str], receiver: &lt;module 'pip_services3_messaging.queues.IMessageReceiver' from '/pip_services3_messaging/queues/IMessageReceiver.py'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.listen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Listens for incoming messages and blocks the current thread until queue is closed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -307,7 +317,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.move_to_dead_letter">
-<code class="sig-name descname">move_to_dead_letter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.move_to_dead_letter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">move_to_dead_letter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.move_to_dead_letter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Permanently removes a message from the queue and sends it to dead letter queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -318,7 +328,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.peek">
-<code class="sig-name descname">peek</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.peek" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">peek</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.peek" title="Permalink to this definition">¶</a></dt>
 <dd><p>Peeks a single incoming message from the queue without removing it.
 If there are no messages available in the queue it returns null.</p>
 <dl class="field-list simple">
@@ -333,7 +343,7 @@ If there are no messages available in the queue it returns null.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.peek_batch">
-<code class="sig-name descname">peek_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">message_count</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.peek_batch" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">peek_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message_count</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><span class="p">]</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.peek_batch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Peeks multiple incoming messages from the queue without removing them.
 If there are no messages available in the queue it returns an empty list.</p>
 <dl class="field-list simple">
@@ -351,7 +361,7 @@ If there are no messages available in the queue it returns an empty list.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.read_message_count">
-<code class="sig-name descname">read_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.read_message_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.read_message_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads the current number of messages in the queue to be delivered.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -362,7 +372,7 @@ If there are no messages available in the queue it returns an empty list.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.receive">
-<code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">wait_timeout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.receive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">wait_timeout</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.receive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Receives an incoming message and removes it from the queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -379,7 +389,7 @@ If there are no messages available in the queue it returns an empty list.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.renew_lock">
-<code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">lock_timeout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.renew_lock" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em>, <em class="sig-param"><span class="n">lock_timeout</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.renew_lock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Renews a lock on a message that makes it invisible from other receivers in the queue.
 This method is usually used to extend the message processing time.</p>
 <dl class="field-list simple">
@@ -394,7 +404,7 @@ This method is usually used to extend the message processing time.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.send">
-<code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">envelop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.send" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">envelop</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.send" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends a message into the queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -408,9 +418,9 @@ This method is usually used to extend the message processing time.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageQueue.send_as_object">
-<code class="sig-name descname">send_as_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">message_type</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.send_as_object" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">send_as_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message_type</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageQueue.send_as_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends an object into the queue.
-Before sending the object is converted into JSON string and wrapped in a <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelop.html#module-pip_services3_messaging.queues.MessageEnvelop" title="pip_services3_messaging.queues.MessageEnvelop"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageEnvelop</span></code></a>.</p>
+Before sending the object is converted into JSON string and wrapped in a <code class="xref py py-class docutils literal notranslate"><span class="pre">MessageEnvelope</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -427,7 +437,7 @@ Before sending the object is converted into JSON string and wrapped in a <a clas
 <dl class="py class">
 <dt id="pip_services3_messaging.queues.IMessageReceiver">
 <em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">IMessageReceiver</code><a class="headerlink" href="#pip_services3_messaging.queues.IMessageReceiver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dd><p>Bases: <a class="reference external" href="http://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
 <p>Callback interface to receive incoming messages.</p>
 <p>Example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyMessageReceiver</span><span class="p">(</span><span class="n">IMessageReceiver</span><span class="p">):</span>
@@ -438,20 +448,25 @@ Before sending the object is converted into JSON string and wrapped in a <a clas
 <span class="n">messageQueue</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">MyMessageReceiver</span><span class="p">())</span>
 
 <span class="n">messageQueue</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
-<span class="n">messageQueue</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">MessageEnvelop</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;mymessage&quot;</span><span class="p">,</span> <span class="s2">&quot;ABC&quot;</span><span class="p">))</span> <span class="c1"># Output in console: &quot;ABC&quot;</span>
+<span class="n">messageQueue</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">MessageEnvelope</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;mymessage&quot;</span><span class="p">,</span> <span class="s2">&quot;ABC&quot;</span><span class="p">))</span> <span class="c1"># Output in console: &quot;ABC&quot;</span>
 </pre></div>
 </div>
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.IMessageReceiver.receive_message">
-<code class="sig-name descname">receive_message</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">queue</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageReceiver.receive_message" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">receive_message</code><span class="sig-paren">(</span><em class="sig-param">message: pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</em>, <em class="sig-param">queue: &lt;module 'pip_services3_messaging.queues.IMessageQueue' from '/pip_services3_messaging/queues/IMessageQueue.py'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.IMessageReceiver.receive_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives incoming message from the queue.
+:param message: an incoming message
+:param queue: a queue where the message comes from</p>
+<p>See <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageEnvelope</span></code></a>,
+<a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html#pip_services3_messaging.queues.IMessageQueue.IMessageQueue" title="pip_services3_messaging.queues.IMessageQueue.IMessageQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">IMessageQueue</span></code></a></p>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MemoryMessageQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="pip_services3_messaging.queues.MessageQueue.html#pip_services3_messaging.queues.MessageQueue.MessageQueue" title="pip_services3_messaging.queues.MessageQueue.MessageQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_messaging.queues.MessageQueue.MessageQueue</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.ICleanable.ICleanable</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MemoryMessageQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pip_services3_messaging.queues.MessageQueue.html#pip_services3_messaging.queues.MessageQueue.MessageQueue" title="pip_services3_messaging.queues.MessageQueue.MessageQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_messaging.queues.MessageQueue.MessageQueue</span></code></a>, <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.run.ICleanable.html#pip_services3_commons.run.ICleanable.ICleanable" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.run.ICleanable.ICleanable</span></code></a></p>
 <p>Message queue that sends and receives messages within the same process by using shared memory.
 This queue is typically used for testing to mock real queues.</p>
 <dl class="simple">
@@ -460,14 +475,14 @@ This queue is typically used for testing to mock real queues.</p>
 </ul>
 </dd>
 <dt>### References ###</dt><dd><ul class="simple">
-<li><p><em>:logger:</em>:<a href="#id1"><span class="problematic" id="id2">*</span></a>:1.0           (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ILogger</span></code> components to pass log messages</p></li>
-<li><p><em>:counters:</em>:<a href="#id3"><span class="problematic" id="id4">*</span></a>:1.0         (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ICounters</span></code> components to pass collected measurements</p></li>
+<li><p><cite>*:logger:*:*:1.0</cite>           (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.log.ILogger.html#pip_services3_components.log.ILogger.ILogger" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ILogger</span></code></a> components to pass log messages</p></li>
+<li><p><cite>*:counters:*:*:1.0</cite>         (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.count.ICounters.html#pip_services3_components.count.ICounters.ICounters" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ICounters</span></code></a> components to pass collected measurements</p></li>
 </ul>
 </dd>
 </dl>
 <p>Example:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">queue</span> <span class="o">=</span> <span class="n">MessageQueue</span><span class="p">(</span><span class="s2">&quot;myqueue&quot;</span><span class="p">)</span>
-<span class="n">queue</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">MessageEnvelop</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;mymessage&quot;</span><span class="p">,</span> <span class="s2">&quot;ABC&quot;</span><span class="p">))</span>
+<span class="n">queue</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">MessageEnvelope</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;mymessage&quot;</span><span class="p">,</span> <span class="s2">&quot;ABC&quot;</span><span class="p">))</span>
 
 <span class="n">message</span> <span class="o">=</span> <span class="n">queue</span><span class="o">.</span><span class="n">receive</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">message</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
@@ -475,20 +490,9 @@ This queue is typically used for testing to mock real queues.</p>
     <span class="n">queue</span><span class="o">.</span><span class="n">complete</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="py class">
-<dt id="pip_services3_messaging.queues.MemoryMessageQueue.LockedMessage">
-<em class="property">class </em><code class="sig-name descname">LockedMessage</code><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.LockedMessage" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<dl class="py attribute">
-<dt id="pip_services3_messaging.queues.MemoryMessageQueue.LockedMessage.lock_expiration">
-<code class="sig-name descname">lock_expiration</code><em class="property"> = None</em><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.LockedMessage.lock_expiration" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.abandon">
-<code class="sig-name descname">abandon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.abandon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">abandon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.abandon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returnes message into the queue and makes it available for all subscribers to receive it again.
 This method is usually used to return a message which could not be processed at the moment
 to repeat the attempt. Messages that cause unrecoverable errors shall be removed permanently
@@ -502,7 +506,7 @@ or/and send to dead letter queue.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.clear">
-<code class="sig-name descname">clear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.clear" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clears component state.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -513,7 +517,7 @@ or/and send to dead letter queue.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Closes component and frees used resources.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -524,12 +528,23 @@ or/and send to dead letter queue.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.complete">
-<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.complete" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.complete" title="Permalink to this definition">¶</a></dt>
 <dd><p>Permanently removes a message from the queue.
 This method is usually used to remove the message after successful processing.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>message</strong> – a message to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MemoryMessageQueue.configure">
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)">pip_services3_commons.config.ConfigParams.ConfigParams</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configures component by passing configuration parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config</strong> – configuration parameters to be set.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -547,8 +562,8 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 </dd></dl>
 
 <dl class="py method">
-<dt id="pip_services3_messaging.queues.MemoryMessageQueue.is_opened">
-<code class="sig-name descname">is_opened</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.is_opened" title="Permalink to this definition">¶</a></dt>
+<dt id="pip_services3_messaging.queues.MemoryMessageQueue.is_open">
+<code class="sig-name descname">is_open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.is_open" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks if the component is opened.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -559,7 +574,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.listen">
-<code class="sig-name descname">listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">receiver</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.listen" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">receiver</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.IMessageReceiver.html#pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver" title="pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver">pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.listen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Listens for incoming messages and blocks the current thread until queue is closed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -573,7 +588,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.move_to_dead_letter">
-<code class="sig-name descname">move_to_dead_letter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.move_to_dead_letter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">move_to_dead_letter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.move_to_dead_letter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Permanently removes a message from the queue and sends it to dead letter queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -584,7 +599,7 @@ When this method is call <a class="reference internal" href="#pip_services3_mess
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.peek">
-<code class="sig-name descname">peek</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.peek" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">peek</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.peek" title="Permalink to this definition">¶</a></dt>
 <dd><p>Peeks a single incoming message from the queue without removing it.
 If there are no messages available in the queue it returns null.</p>
 <dl class="field-list simple">
@@ -599,7 +614,7 @@ If there are no messages available in the queue it returns null.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.peek_batch">
-<code class="sig-name descname">peek_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">message_count</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.peek_batch" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">peek_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message_count</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><span class="p">]</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.peek_batch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Peeks multiple incoming messages from the queue without removing them.
 If there are no messages available in the queue it returns an empty list.</p>
 <dl class="field-list simple">
@@ -617,7 +632,7 @@ If there are no messages available in the queue it returns an empty list.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.read_message_count">
-<code class="sig-name descname">read_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.read_message_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.read_message_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads the current number of messages in the queue to be delivered.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -628,7 +643,7 @@ If there are no messages available in the queue it returns an empty list.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.receive">
-<code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">wait_timeout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.receive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">wait_timeout</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><span class="p">]</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.receive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Receives an incoming message and removes it from the queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -645,7 +660,7 @@ If there are no messages available in the queue it returns an empty list.</p>
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MemoryMessageQueue.renew_lock">
-<code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span></em>, <em class="sig-param"><span class="n">lock_timeout</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.renew_lock" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em>, <em class="sig-param"><span class="n">lock_timeout</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MemoryMessageQueue.renew_lock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Renews a lock on a message that makes it invisible from other receivers in the queue.
 This method is usually used to extend the message processing time.</p>
 <dl class="field-list simple">
@@ -666,7 +681,7 @@ This method is usually used to extend the message processing time.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
-<li><p><strong>envelop</strong> – a message envelop to be sent.</p></li>
+<li><p><strong>message</strong> – a message envelop to be sent.</p></li>
 </ul>
 </dd>
 </dl>
@@ -675,43 +690,125 @@ This method is usually used to extend the message processing time.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="pip_services3_messaging.queues.MessageEnvelop">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MessageEnvelop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message_type</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dt id="pip_services3_messaging.queues.MessageEnvelope">
+<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MessageEnvelope</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message_type</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Any<span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Allows adding additional information to messages. A correlation id, message id, and a message type
 are added to the data being sent/received. Additionally, a MessageEnvelope can reference a lock token.</p>
-<p>Side note: a MessageEnvelope’s message is stored as a buffer, so strings are converted using utf8 conversions.</p>
-<dl class="py attribute">
-<dt id="pip_services3_messaging.queues.MessageEnvelop.correlation_id">
-<code class="sig-name descname">correlation_id</code><em class="property"> = None</em><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelop.correlation_id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<p>Side note: a MessageEnvelope’s message is stored as a buffer, so strings are converted
+using utf8 conversions.</p>
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.from_json">
+<em class="property">static </em><code class="sig-name descname">from_json</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><span class="p">]</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a JSON string into a MessageEnvelope
+The message payload is passed as base64 string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – a JSON encoded string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a decoded Message Envelop.</p>
+</dd>
+</dl>
+</dd></dl>
 
-<dl class="py attribute">
-<dt id="pip_services3_messaging.queues.MessageEnvelop.message">
-<code class="sig-name descname">message</code><em class="property"> = None</em><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelop.message" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.get_message_as">
+<code class="sig-name descname">get_message_as</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.get_message_as" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO add description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the value that was stored in this message as a JSON string.</p>
+</dd>
+</dl>
+</dd></dl>
 
-<dl class="py attribute">
-<dt id="pip_services3_messaging.queues.MessageEnvelop.message_id">
-<code class="sig-name descname">message_id</code><em class="property"> = None</em><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelop.message_id" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.get_message_as_string">
+<code class="sig-name descname">get_message_as_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.get_message_as_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>TODO add description</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the information stored in this message as a UTF-8 encoded string.</p>
+</dd>
+</dl>
+</dd></dl>
 
-<dl class="py attribute">
-<dt id="pip_services3_messaging.queues.MessageEnvelop.message_type">
-<code class="sig-name descname">message_type</code><em class="property"> = None</em><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelop.message_type" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.get_reference">
+<code class="sig-name descname">get_reference</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.get_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a lock token reference for this MessageEnvelope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the lock token that this MessageEnvelope references.</p>
+</dd>
+</dl>
+</dd></dl>
 
-<dl class="py attribute">
-<dt id="pip_services3_messaging.queues.MessageEnvelop.reference">
-<code class="sig-name descname">reference</code><em class="property"> = None</em><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelop.reference" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.set_message_as_object">
+<code class="sig-name descname">set_message_as_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.set_message_as_object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the given value as a object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – the value to convert to JSON and store in  this message.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.set_message_as_string">
+<code class="sig-name descname">set_message_as_string</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.set_message_as_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the given string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – the string to set. Will be converted to a buffer, using UTF-8 encoding.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.set_reference">
+<code class="sig-name descname">set_reference</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.set_reference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets a lock token reference for this MessageEnvelope.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> – the lock token to reference.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)">dict</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts this MessageEnvelope to a JSON string.
+The message payload is passed as base64 string</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A JSON encoded representation is this object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageEnvelope.to_string">
+<code class="sig-name descname">to_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageEnvelope.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert’s this MessageEnvelope to a string, using the following format:
+<code class="docutils literal notranslate"><span class="pre">`&quot;[&lt;correlation_id&gt;,&lt;message_type&gt;,&lt;message.toString&gt;]&quot;`</span></code>.</p>
+<p>If any of the values are <code class="docutils literal notranslate"><span class="pre">`None`</span></code>, they will be replaced with <code class="docutils literal notranslate"><span class="pre">`---`</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the generated string.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="pip_services3_messaging.queues.MessageQueue">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MessageQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.config.IConfigurable.IConfigurable</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.refer.IReferenceable.IReferenceable</span></code>, <a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html#pip_services3_messaging.queues.IMessageQueue.IMessageQueue" title="pip_services3_messaging.queues.IMessageQueue.IMessageQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_messaging.queues.IMessageQueue.IMessageQueue</span></code></a></p>
+<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MessageQueue</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">capabilities</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessagingCapabilities.html#pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities" title="pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities">pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities</a></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.IConfigurable.html#pip_services3_commons.config.IConfigurable.IConfigurable" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.config.IConfigurable.IConfigurable</span></code></a>, <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.refer.IReferenceable.html#pip_services3_commons.refer.IReferenceable.IReferenceable" title="(in pip-services3-commons)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_commons.refer.IReferenceable.IReferenceable</span></code></a>, <a class="reference internal" href="pip_services3_messaging.queues.IMessageQueue.html#pip_services3_messaging.queues.IMessageQueue.IMessageQueue" title="pip_services3_messaging.queues.IMessageQueue.IMessageQueue"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_messaging.queues.IMessageQueue.IMessageQueue</span></code></a></p>
 <p>Abstract message queue.</p>
 <p>Abstract message queue that is used as a basis for specific message queue implementations.</p>
 <dl class="simple">
@@ -736,19 +833,31 @@ are added to the data being sent/received. Additionally, a MessageEnvelope can r
 <li><p>access_key:                application secret key</p></li>
 </ul>
 </dd>
-</dl>
-<p>### References ###</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><em>:logger:</em>:<a href="#id5"><span class="problematic" id="id6">*</span></a>:1.0           (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ILogger</span></code> components to pass log messages</p></li>
-<li><p><em>:counters:</em>:<a href="#id7"><span class="problematic" id="id8">*</span></a>:1.0         (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ICounters</span></code> components to pass collected measurements</p></li>
-<li><p><em>:discovery:</em>:<a href="#id9"><span class="problematic" id="id10">*</span></a>:1.0        (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code> components to discover connection(s)</p></li>
-<li><p><em>:credential-store:</em>:<a href="#id11"><span class="problematic" id="id12">*</span></a>:1.0 (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ICredentialStore</span></code> componetns to lookup credential(s)</p></li>
+<dt>### References ###</dt><dd><ul class="simple">
+<li><p><cite>*:logger:*:*:1.0</cite>              (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.log.ILogger.html#pip_services3_components.log.ILogger.ILogger" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ILogger</span></code></a> components to pass log messages</p></li>
+<li><p><cite>*:counters:*:*:1.0</cite>            (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.count.ICounters.html#pip_services3_components.count.ICounters.ICounters" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ICounters</span></code></a> components to pass collected measurements</p></li>
+<li><p><cite>*:discovery:*:*:1.0</cite>           (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.connect.IDiscovery.html#pip_services3_components.connect.IDiscovery.IDiscovery" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code></a> components to discover connection(s)</p></li>
+<li><p><cite>*:credential-store:*:*:1.0</cite>    (optional) <a class="reference external" href="https://pip-services3-python.github.io/pip-services3-components-python/pip_services3_components.auth.ICredentialStore.html#pip_services3_components.auth.ICredentialStore.ICredentialStore" title="(in pip-services3-components)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ICredentialStore</span></code></a> componetns to lookup credential(s)</p></li>
 </ul>
-</div></blockquote>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.abandon">
+<em class="property">abstract </em><code class="sig-name descname">abandon</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.abandon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returnes message into the queue and makes it available for all subscribers to receive it again.
+This method is usually used to return a message which could not be processed at the moment
+to repeat the attempt. Messages that cause unrecoverable errors shall be removed permanently
+or/and send to dead letter queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – a message to return.</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessageQueue.begin_listen">
-<code class="sig-name descname">begin_listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">receiver</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.begin_listen" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">begin_listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">receiver</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.IMessageReceiver.html#pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver" title="pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver">pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.begin_listen" title="Permalink to this definition">¶</a></dt>
 <dd><p>Listens for incoming messages without blocking the current thread.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -761,8 +870,38 @@ are added to the data being sent/received. Additionally, a MessageEnvelope can r
 </dd></dl>
 
 <dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.clear">
+<em class="property">abstract </em><code class="sig-name descname">clear</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears component state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.close">
+<em class="property">abstract </em><code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes component and frees used resources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.complete">
+<em class="property">abstract </em><code class="sig-name descname">complete</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permanently removes a message from the queue.
+This method is usually used to remove the message after successful processing.
+:param message: a message to remove.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pip_services3_messaging.queues.MessageQueue.configure">
-<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.configure" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">configure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.config.ConfigParams.html#pip_services3_commons.config.ConfigParams.ConfigParams" title="(in pip-services3-commons)">pip_services3_commons.config.ConfigParams.ConfigParams</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.configure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures component by passing configuration parameters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -772,8 +911,20 @@ are added to the data being sent/received. Additionally, a MessageEnvelope can r
 </dd></dl>
 
 <dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.end_listen">
+<em class="property">abstract </em><code class="sig-name descname">end_listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.end_listen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ends listening for incoming messages.
+When this method is call <strong>listen</strong> unblocks the thread and execution continues.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pip_services3_messaging.queues.MessageQueue.get_capabilities">
-<code class="sig-name descname">get_capabilities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.get_capabilities" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_capabilities</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_messaging.queues.MessagingCapabilities.html#pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities" title="pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities">pip_services3_messaging.queues.MessagingCapabilities.MessagingCapabilities</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.get_capabilities" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the queue capabilities</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -784,7 +935,7 @@ are added to the data being sent/received. Additionally, a MessageEnvelope can r
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessageQueue.get_name">
-<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.get_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.get_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the queue name</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -794,8 +945,44 @@ are added to the data being sent/received. Additionally, a MessageEnvelope can r
 </dd></dl>
 
 <dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.is_open">
+<em class="property">abstract </em><code class="sig-name descname">is_open</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.is_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if the component is opened.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if the component has been opened and false otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.listen">
+<em class="property">abstract </em><code class="sig-name descname">listen</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">receiver</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.IMessageReceiver.html#pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver" title="pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver">pip_services3_messaging.queues.IMessageReceiver.IMessageReceiver</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.listen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Listens for incoming messages and blocks the current thread until queue is closed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>receiver</strong> – a receiver to receive incoming messages.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.move_to_dead_letter">
+<em class="property">abstract </em><code class="sig-name descname">move_to_dead_letter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.move_to_dead_letter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Permanently removes a message from the queue and sends it to dead letter queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>message</strong> – a message to be removed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pip_services3_messaging.queues.MessageQueue.open">
-<code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.open" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">open</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.open" title="Permalink to this definition">¶</a></dt>
 <dd><p>Opens the component.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -805,10 +992,94 @@ are added to the data being sent/received. Additionally, a MessageEnvelope can r
 </dd></dl>
 
 <dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.peek">
+<em class="property">abstract </em><code class="sig-name descname">peek</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.peek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Peeks a single incoming message from the queue without removing it.
+If there are no messages available in the queue it returns <cite>None</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a peeked message or <cite>None</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.peek_batch">
+<em class="property">abstract </em><code class="sig-name descname">peek_batch</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message_count</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span> &#x2192; List<span class="p">[</span><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><span class="p">]</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.peek_batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Peeks multiple incoming messages from the queue without removing them.
+If there are no messages available in the queue it returns an empty list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>message_count</strong> – a maximum number of messages to peek.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of peeked messages</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.read_message_count">
+<em class="property">abstract </em><code class="sig-name descname">read_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.read_message_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the current number of messages in the queue to be delivered.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a number of messages in the queue.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.receive">
+<em class="property">abstract </em><code class="sig-name descname">receive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">wait_timeout</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receives an incoming message and removes it from the queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>wait_timeout</strong> – a timeout in milliseconds to wait for a message to come.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a received message or <cite>None</cite>.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.renew_lock">
+<em class="property">abstract </em><code class="sig-name descname">renew_lock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em>, <em class="sig-param"><span class="n">lock_timeout</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.renew_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Renews a lock on a message that makes it invisible from other receivers in the queue.
+This method is usually used to extend the message processing time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> – a message to extend its lock.</p></li>
+<li><p><strong>lock_timeout</strong> – a locking timeout in milliseconds.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.send">
+<em class="property">abstract </em><code class="sig-name descname">send</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">envelop</span><span class="p">:</span> <span class="n"><a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelope.html#pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope" title="pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope">pip_services3_messaging.queues.MessageEnvelope.MessageEnvelope</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sends a message into the queue.
+:param correlation_id: (optional) transaction id to trace execution through call chain.
+:param envelop: a message envelop to be sent.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pip_services3_messaging.queues.MessageQueue.send_as_object">
-<code class="sig-name descname">send_as_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span></em>, <em class="sig-param"><span class="n">message_type</span></em>, <em class="sig-param"><span class="n">message</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.send_as_object" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">send_as_object</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">message_type</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Any</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.send_as_object" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends an object into the queue.
-Before sending the object is converted into JSON string and wrapped in a <a class="reference internal" href="pip_services3_messaging.queues.MessageEnvelop.html#module-pip_services3_messaging.queues.MessageEnvelop" title="pip_services3_messaging.queues.MessageEnvelop"><code class="xref py py-class docutils literal notranslate"><span class="pre">MessageEnvelop</span></code></a>.</p>
+Before sending the object is converted into JSON string and wrapped in a <code class="xref py py-class docutils literal notranslate"><span class="pre">MessageEnvelope</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -822,7 +1093,7 @@ Before sending the object is converted into JSON string and wrapped in a <a clas
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessageQueue.set_references">
-<code class="sig-name descname">set_references</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">references</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.set_references" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_references</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">references</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://pip-services3-python.github.io/pip-services3-commons-python/pip_services3_commons.refer.IReferences.html#pip_services3_commons.refer.IReferences.IReferences" title="(in pip-services3-commons)">pip_services3_commons.refer.IReferences.IReferences</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.set_references" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets references to dependent components.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -831,17 +1102,28 @@ Before sending the object is converted into JSON string and wrapped in a <a clas
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt id="pip_services3_messaging.queues.MessageQueue.to_string">
+<code class="sig-name descname">to_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a><a class="headerlink" href="#pip_services3_messaging.queues.MessageQueue.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a string representation of the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a string representation of the object.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="py class">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities">
-<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MessagingCapabilities</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message_count</span></em>, <em class="sig-param"><span class="n">send</span></em>, <em class="sig-param"><span class="n">receive</span></em>, <em class="sig-param"><span class="n">peek</span></em>, <em class="sig-param"><span class="n">peek_batch</span></em>, <em class="sig-param"><span class="n">renew_lock</span></em>, <em class="sig-param"><span class="n">abandon</span></em>, <em class="sig-param"><span class="n">dead_letter</span></em>, <em class="sig-param"><span class="n">clear</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<em class="property">class </em><code class="sig-prename descclassname">pip_services3_messaging.queues.</code><code class="sig-name descname">MessagingCapabilities</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">message_count</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">send</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">receive</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">peek</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">peek_batch</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">renew_lock</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">abandon</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">dead_letter</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em>, <em class="sig-param"><span class="n">clear</span><span class="p">:</span> <span class="n"><a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="http://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Data object that contains supported capabilities of a message queue.
 If certain capability is not supported a queue will throw NotImplemented exception.</p>
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_abandon">
-<code class="sig-name descname">can_abandon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_abandon" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_abandon</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_abandon" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to abandon messages.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -852,7 +1134,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_clear">
-<code class="sig-name descname">can_clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_clear" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_clear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue can be cleared.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -863,7 +1145,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_dead_letter">
-<code class="sig-name descname">can_dead_letter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_dead_letter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_dead_letter</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_dead_letter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to send messages to dead letter queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -874,7 +1156,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_message_count">
-<code class="sig-name descname">can_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_message_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_message_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_message_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to read number of messages.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -885,7 +1167,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_peek">
-<code class="sig-name descname">can_peek</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_peek" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_peek</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_peek" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to peek messages.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -896,7 +1178,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_peek_batch">
-<code class="sig-name descname">can_peek_batch</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_peek_batch" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_peek_batch</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_peek_batch" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to peek multiple messages in one batch.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -907,7 +1189,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_receive">
-<code class="sig-name descname">can_receive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_receive" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_receive</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_receive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to receive messages.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -918,7 +1200,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_renew_lock">
-<code class="sig-name descname">can_renew_lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_renew_lock" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_renew_lock</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_renew_lock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to renew message lock.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -929,7 +1211,7 @@ If certain capability is not supported a queue will throw NotImplemented excepti
 
 <dl class="py method">
 <dt id="pip_services3_messaging.queues.MessagingCapabilities.can_send">
-<code class="sig-name descname">can_send</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_send" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">can_send</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="http://docs.python.org/3/library/functions.html#bool" title="(in Python v3.9)">bool</a><a class="headerlink" href="#pip_services3_messaging.queues.MessagingCapabilities.can_send" title="Permalink to this definition">¶</a></dt>
 <dd><p>Informs if the queue is able to send messages.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -949,37 +1231,29 @@ If certain capability is not supported a queue will throw NotImplemented excepti
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="pip_services3_messaging.queues.IMessageQueue.html" class="btn btn-neutral float-right" title="pip_services3_messaging.queues.IMessageQueue module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pip_services3_messaging.build.MemoryMessageQueueFactory.html" class="btn btn-neutral float-left" title="pip_services3_messaging.build.MemoryMessageQueueFactory module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="pip_services3_messaging.queues.CachedMessageQueue.html" class="btn btn-neutral float-right" title="pip_services3_messaging.queues.CachedMessageQueue module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="pip_services3_messaging.connect.IMessageQueueConnection.html" class="btn btn-neutral float-left" title="pip_services3_messaging.connect.IMessageQueueConnection module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2020, Sergey Seroukhov
+        &#169; Copyright 2020, Sergey Seroukhov.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

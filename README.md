@@ -7,6 +7,7 @@ The Messaging module contains a set of interfaces and classes for working with m
 The module contains the following packages:
 
 - **Build** - in-memory message queue factory
+- **Connect** - TODO add description
 - **Queues** - contains interfaces for working with message queues, subscriptions for receiving messages from the queue, and an in-memory message queue implementation.
 
 <a name="links"></a> Quick links:
@@ -55,4 +56,6 @@ Before committing changes run dockerized build and test as:
 
 ## Contacts
 
-The Python version of Pip.Services is created and maintained by **Sergey Seroukhov**
+The Python version of Pip.Services is created and maintained by:
+- **Sergey Seroukhov**
+- **Danil Prisiazhnyi**

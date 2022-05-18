@@ -9,121 +9,116 @@
     :license: MIT, see LICENSE for more details.
 """
 
-class MessagingCapabilities(object):
+
+class MessagingCapabilities:
     """
     Data object that contains supported capabilities of a message queue.
     If certain capability is not supported a queue will throw NotImplemented exception.
     """
-    _message_count = None
-    _send = None
-    _receive = None
-    _peek = None
-    _peek_batch = None
-    _renew_lock = None
-    _abandon = None
-    _dead_letter = None
-    _clear = None
 
-    def __init__(self, message_count, send, receive, peek, peek_batch, renew_lock, abandon, dead_letter, clear):
+    def __init__(self, can_message_count: bool, can_send: bool, can_receive: bool, can_peek: bool, can_peek_batch: bool,
+                 can_renew_lock: bool,
+                 can_abandon: bool, can_dead_letter: bool, can_clear: bool):
         """
         Creates a new instance of the capabilities object.
 
-        :param message_count: true if queue supports reading message count.
-
-        :param send: true if queue is able to send messages.
-
-        :param receive: true if queue is able to receive messages.
-
-        :param peek: true if queue is able to peek messages.
-
-        :param peek_batch: true if queue is able to peek multiple messages in one batch.
-
-        :param renew_lock: true if queue is able to renew message lock.
-
-        :param abandon: true if queue is able to abandon messages.
-
-        :param dead_letter: true if queue is able to send messages to dead letter queue.
-
-        :param clear: true if queue can be cleared.
+        :param can_message_count: true if queue supports reading message count.
+        :param can_send: true if queue is able to send messages.
+        :param can_receive: true if queue is able to receive messages.
+        :param can_peek: true if queue is able to peek messages.
+        :param can_peek_batch: true if queue is able to peek multiple messages in one batch.
+        :param can_renew_lock: true if queue is able to renew message lock.
+        :param can_abandon: true if queue is able to abandon messages.
+        :param can_dead_letter: true if queue is able to send messages to dead letter queue.
+        :param can_clear: true if queue can be cleared.
         """
-        self._message_count = message_count
-        self._send = send
-        self._receive = receive
-        self._peek = peek
-        self._peek_batch = peek_batch
-        self._renew_lock = renew_lock
-        self._abandon = abandon
-        self._dead_letter = dead_letter
-        self._clear = clear
+        self._can_message_count = can_message_count
+        self._can_send = can_send
+        self._can_receive = can_receive
+        self._can_peek = can_peek
+        self._can_peek_batch = can_peek_batch
+        self._can_renew_lock = can_renew_lock
+        self._can_abandon = can_abandon
+        self._can_dead_letter = can_dead_letter
+        self._can_clear = can_clear
 
-    def can_message_count(self):
+    @property
+    def can_message_count(self) -> bool:
         """
         Informs if the queue is able to read number of messages.
 
         :return: true if queue supports reading message count.
         """
-        return self._message_count
+        return self._can_message_count
 
-    def can_send(self):
+    @property
+    def can_send(self) -> bool:
         """
         Informs if the queue is able to send messages.
 
         :return: true if queue is able to send messages.
         """
-        return self._send
+        return self._can_send
 
-    def can_receive(self):
+    @property
+    def can_receive(self) -> bool:
         """
         Informs if the queue is able to receive messages.
 
         :return: true if queue is able to receive messages.
         """
-        return self._receive
+        return self._can_receive
 
-    def can_peek(self):
+    @property
+    def can_peek(self) -> bool:
         """
         Informs if the queue is able to peek messages.
 
         :return: true if queue is able to peek messages.
         """
-        return self._peek
+        return self._can_peek
 
-    def can_peek_batch(self):
+    @property
+    def can_peek_batch(self) -> bool:
         """
         Informs if the queue is able to peek multiple messages in one batch.
 
         :return: true if queue is able to peek multiple messages in one batch.
         """
-        return self._peek_batch
+        return self._can_peek_batch
 
-    def can_renew_lock(self):
+    @property
+    def can_renew_lock(self) -> bool:
         """
         Informs if the queue is able to renew message lock.
 
         :return: true if queue is able to renew message lock.
         """
-        return self._renew_lock
+        return self._can_renew_lock
 
-    def can_abandon(self):
+    @property
+    def can_abandon(self) -> bool:
         """
         Informs if the queue is able to abandon messages.
 
         :return: true if queue is able to abandon.
         """
-        return self._abandon
+        return self._can_abandon
 
-    def can_dead_letter(self):
+    @property
+    def can_dead_letter(self) -> bool:
         """
         Informs if the queue is able to send messages to dead letter queue.
 
         :return: true if queue is able to send messages to dead letter queue.
         """
-        return self._dead_letter
+        return self._can_dead_letter
 
-    def can_clear(self):
+    @property
+    def can_clear(self) -> bool:
         """
         Informs if the queue can be cleared.
 
         :return: true if queue can be cleared.
         """
-        return self._clear
+        return self._can_clear

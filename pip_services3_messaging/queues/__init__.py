@@ -9,15 +9,18 @@
     :license: MIT, see LICENSE for more details.
 """
 
-
 __all__ = [
-    'IMessageQueue', 'MessageEnvelop', 'MessagingCapabilities',
-    'IMessageReceiver', 'MessageQueue', 'MemoryMessageQueue'
+    'IMessageQueue', 'MessageEnvelope', 'MessagingCapabilities',
+    'IMessageReceiver', 'MessageQueue', 'MemoryMessageQueue',
+    'CachedMessageQueue', 'CallbackMessageReceiver', 'LockedMessage'
 ]
 
 from .IMessageQueue import IMessageQueue
-from .MessageEnvelop import MessageEnvelop
-from .MessagingCapabilities import MessagingCapabilities
 from .IMessageReceiver import IMessageReceiver
-from .MessageQueue import MessageQueue
+from .LockedMessage import LockedMessage
 from .MemoryMessageQueue import MemoryMessageQueue
+from .MessageEnvelope import MessageEnvelope
+from .MessageQueue import MessageQueue
+from .MessagingCapabilities import MessagingCapabilities
+from .CallbackMessageReceiver import CallbackMessageReceiver
+from .CachedMessageQueue import CachedMessageQueue

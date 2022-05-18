@@ -8,7 +8,9 @@ Submodules
    :maxdepth: 4
 
    pip_services3_messaging.build.DefaultMessagingFactory
+   pip_services3_messaging.build.IMessageQueueFactory
    pip_services3_messaging.build.MemoryMessageQueueFactory
+   pip_services3_messaging.build.MessageQueueFactory
 
 Module contents
 ---------------
