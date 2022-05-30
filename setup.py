@@ -23,7 +23,7 @@ except:
 
 setup(
     name='pip_services3_messaging',
-    version='3.1.1',
+    version='3.1.2',
     url='http://github.com/pip-services3-python/pip-services3-messaging-python',
     license='MIT',
     author='Conceptual Vision Consulting LLC',

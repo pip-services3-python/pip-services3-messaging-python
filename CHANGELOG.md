@@ -1,5 +1,11 @@
 # Asynchronous message queues for Pip.Services in Python Changelog
 
+
+## <a name="3.1.2"></a> 3.1.2 (2022-05-30)
+
+### Bug Fixes
+* Fixed thread safety for CachedMessageQueue, MemoryMessageQueue
+
 ## <a name="3.1.0"></a> 3.1.0 (2021-05-11)
 
 ### Bug Fixes

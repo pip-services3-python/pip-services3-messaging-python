@@ -76,8 +76,9 @@ class CachedMessageQueue(MessageQueue, ICleanable):
             # Unsubscribe from the broker
             self._unsubscribe(correlation_id)
         finally:
-            self._messages = []
-            self._receiver = None
+            with self._lock:
+                self._messages = []
+                self._receiver = None
 
     @abstractmethod
     def _subscribe(self, correlation_id: Optional[str]):
@@ -101,7 +102,8 @@ class CachedMessageQueue(MessageQueue, ICleanable):
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
         """
-        self._messages = []
+        with self._lock:
+            self._messages = []
 
     def read_message_count(self) -> int:
         """
@@ -109,7 +111,8 @@ class CachedMessageQueue(MessageQueue, ICleanable):
 
         :return: a number of messages in the queue.
         """
-        return len(self._messages)
+        with self._lock:
+            return len(self._messages)
 
     def peek(self, correlation_id: Optional[str]) -> MessageEnvelope:
         """
@@ -127,8 +130,9 @@ class CachedMessageQueue(MessageQueue, ICleanable):
         # Peek a message from the top
         message: MessageEnvelope = None
 
-        if len(self._messages) > 0:
-            message = self._messages[0]
+        with self._lock:
+            if len(self._messages) > 0:
+                message = self._messages[0]
 
         if message is not None:
             self._logger.trace(message.correlation_id, "Peeked message %s on %s", message, self.get_name())
@@ -152,7 +156,8 @@ class CachedMessageQueue(MessageQueue, ICleanable):
         self._subscribe(correlation_id)
 
         # Peek a batch of messages
-        messages = self._messages[:message_count]
+        with self._lock:
+            messages = self._messages[:message_count]
 
         self._logger.trace(correlation_id, "Peeked %d messages on %s", len(messages), self.get_name())
 
@@ -225,13 +230,12 @@ class CachedMessageQueue(MessageQueue, ICleanable):
             with self._lock:
                 message = self._messages.pop(0)
 
-            if message is not None:
-                self._send_message_to_receiver(receiver, message)
+                if message is not None:
+                    self._send_message_to_receiver(receiver, message)
 
         # Set the receiver
         if self.is_open():
-            with self._lock:
-                self._receiver = receiver
+            self._receiver = receiver
 
     def end_listen(self, correlation_id: Optional[str]):
         """
@@ -240,5 +244,4 @@ class CachedMessageQueue(MessageQueue, ICleanable):
 
         :param correlation_id: (optional) transaction id to trace execution through call chain.
         """
-        with self._lock:
-            self._receiver = None
+        self._receiver = None

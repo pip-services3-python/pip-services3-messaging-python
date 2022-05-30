@@ -133,7 +133,8 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
 
         :return: a number of messages
         """
-        return len(self.__messages)
+        with self._lock:
+            return len(self.__messages)
 
     def send(self, correlation_id: Optional[str], message: MessageEnvelope):
         """
@@ -216,11 +217,12 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
             if len(self.__messages) > 0:
                 message = self.__messages.pop(0)
 
-            while elapsed_time < wait_timeout and message is None:
-                # Wait for a while
-                self._event.wait(check_interval_ms / 1000)
-                elapsed_time += check_interval_ms
+        while elapsed_time < wait_timeout and message is None:
+            # Wait for a while
+            self._event.wait(check_interval_ms / 1000)
+            elapsed_time += check_interval_ms
 
+            with self._lock:
                 # Get message the the queue
                 if len(self.__messages) > 0:
                     message = self.__messages.pop(0)
@@ -228,19 +230,18 @@ class MemoryMessageQueue(MessageQueue, ICleanable):
         if message is None:
             return message
 
-        with self._lock:
-            # Generate and set locked token
-            locked_token = self.__lock_token_sequence
-            self.__lock_token_sequence += 1
-            message.set_reference(locked_token)
+        # Generate and set locked token
+        locked_token = self.__lock_token_sequence
+        self.__lock_token_sequence += 1
+        message.set_reference(locked_token)
 
-            # Add messages to locked messages list
-            locked_message = LockedMessage()
-            now = datetime.datetime.now()
-            locked_message.expiration_time = datetime.datetime.fromtimestamp(now.timestamp() + wait_timeout / 1000)
-            locked_message.message = message
-            locked_message.timeout = wait_timeout
-            self.__locked_messages[locked_token] = locked_message
+        # Add messages to locked messages list
+        locked_message = LockedMessage()
+        now = datetime.datetime.now()
+        locked_message.expiration_time = datetime.datetime.fromtimestamp(now.timestamp() + wait_timeout / 1000)
+        locked_message.message = message
+        locked_message.timeout = wait_timeout
+        self.__locked_messages[locked_token] = locked_message
 
         # Instrument the process
         self._counters.increment_one("queue." + self.get_name() + ".received_messages")
