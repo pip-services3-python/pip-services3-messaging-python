@@ -1,5 +1,5 @@
 {
-    "name":  "pip_services3_messaging",
+    "name":  "pip-services3-messaging",
     "type": "module",
     "language": "python",
     "version": "3.1.2",
